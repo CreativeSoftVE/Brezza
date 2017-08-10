@@ -15,10 +15,15 @@
         return view('welcome');
     });
 
+
 /*
 * Ruta destinada a todas las operaciones del admin
 */
-
     Route::group(['prefix' => 'admin'],function(){
         Route::resource('users','UserController');
     });
+    
+    
+    
+    Route::get('/', 'HomeController@index')->name("main");
+    Route::get('/minor', 'HomeController@minor')->name("minor");
