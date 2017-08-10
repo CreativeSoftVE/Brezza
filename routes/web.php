@@ -11,6 +11,7 @@
 |
 */
 
+
     Route::get('/', function () {
         return view('welcome');
     });
@@ -20,10 +21,6 @@
 * Ruta destinada a todas las operaciones del admin
 */
     Route::group(['prefix' => 'admin'],function(){
-        Route::resource('users','UserController');
+        Route::get('/', 'AdminController@index')->name("main");
+        Route::get('/minor', 'AdminController@minor')->name("minor");
     });
-    
-    
-    
-    Route::get('/', 'HomeController@index')->name("main");
-    Route::get('/minor', 'HomeController@minor')->name("minor");

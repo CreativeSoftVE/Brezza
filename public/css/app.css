@@ -1,11 +1,5 @@
-/*
- *
- *   INSPINIA - Responsive Admin Theme
- *   version 2.7
- *    #1ab394 color original
-*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
