@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración - @yield('title') </title>
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="{!! secure_asset('css/vendor.css') !!}" />
-    <link rel="stylesheet" href="{!! secure_asset('css/app.css') !!}" />
+    
+    <link rel="stylesheet" href="{!! secure_asset('../css/vendor.css') !!}" />
+    <link rel="stylesheet" href="{!! secure_asset('../css/app.css') !!}" />
+
+    <link rel="stylesheet" href="{!! asset('../css/vendor.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('../css/app.css') !!}" />
 
 </head>
 <body>
@@ -40,6 +43,9 @@
 <script src="{!! secure_asset('js/bootstrap.js') !!}" type="text/javascript"></script>
 <script src="{!! secure_asset('js/app.js') !!}" type="text/javascript"></script>
 
+<script src="{!! asset('js/jquery-3.1.1.min.js') !!}" type="text/javascript"></script>
+<script src="{!! asset('js/bootstrap.js') !!}" type="text/javascript"></script>
+<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
 @section('scripts')
 @show
 

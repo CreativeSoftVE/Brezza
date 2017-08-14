@@ -13,7 +13,7 @@
 
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('landing.index');
     });
 
 
@@ -22,5 +22,7 @@
 */
     Route::group(['prefix' => 'admin'],function(){
         Route::get('/', 'AdminController@index')->name("main");
+        Route::resource('/users', 'UsersController');
+        Route::resource('/messages', 'MessagesController');
         Route::get('/minor', 'AdminController@minor')->name("minor");
     });
