@@ -4,10 +4,12 @@
 *
 */
 
+
    $(function() {
    
        $('body').addClass('landing-page');
        $('body').attr('id', 'page-top');
+   
        $('body').scrollspy({
            target: '.navbar-fixed-top',
            offset: 80
@@ -89,14 +91,16 @@
    
    //detect click on the next arrow
    timelineComponents['timelineNavigation'].on('click', '.next', function(event){
-   	event.preventDefault();
-   	updateSlide(timelineComponents, timelineTotWidth, 'next');
-   });
+                    event.preventDefault();
+                    var next = timelineComponents['eventsWrapper'].find('a.selected');
+                    $(next.parent().next().children()).trigger( "click" );
+                  });
    //detect click on the prev arrow
    timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
-   	event.preventDefault();
-   	updateSlide(timelineComponents, timelineTotWidth, 'prev');
-   });
+                    event.preventDefault();
+                    var prev = timelineComponents['eventsWrapper'].find('a.selected');
+                    $(prev.parent().prev().children()).trigger( "click" );
+                  });
    //detect click on the a single event - show new event content
    timelineComponents['eventsWrapper'].on('click', 'a', function(event){
    	event.preventDefault();

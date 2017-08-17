@@ -1,5 +1,87 @@
 /*/////////////////////////////////////////////////////////////
-              steps
+              BENEFICIOS
+////////////////////////////////////////////////////////////*/
+.benefits{
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 70px;
+}
+
+
+
+
+.cd-timeline-navigation a.prev i{
+	color: #00257B;
+    z-index: 1000000000000000;
+    position: relative;
+    font-size: 30px;
+    bottom: 15px;
+    right: 30px;
+}
+
+.cd-timeline-navigation a.next i{
+	color: #00257B;
+    z-index: 1000000000000000;
+    position: relative;
+    font-size: 30px;
+    bottom: 15px;
+}
+
+
+
+
+
+
+.accordion-inner img{
+  border-radius: 4px;
+}
+
+
+a.accordion-toggle  i{
+  width: 40px;
+  border-radius: 4px;
+  line-height: 38px;
+  font-size: 20px;
+  margin-top: -10px;
+  text-align: center;
+  margin-right: -15px;
+  background: #00257b;
+  color:#fff;
+}
+
+
+.panel-heading.active{
+  background: #2487cd;
+}
+.panel-heading.actives a{
+  color: #FFFFFF;
+}
+
+a.accordion-toggle[aria-expanded="true"]{
+  color: #FFFFFF !important;
+}
+.panel-heading.active a.accordion-toggle i{
+  background: #00257b;
+  color: #fff;
+}
+.panel-heading.active a.accordion-toggle.collapsed i{
+  background: #00257b;
+  color: #fff;
+}
+
+.actives {
+  background-color: #3498DB !important;
+}
+
+a.accordion-toggle[aria-expanded="true"] h3 i.fa-angle-right:before{
+  content: "\f107";
+}
+
+
+
+/*/////////////////////////////////////////////////////////////
+              PASOS
 ////////////////////////////////////////////////////////////*/
 /* -------------------------------- 
 

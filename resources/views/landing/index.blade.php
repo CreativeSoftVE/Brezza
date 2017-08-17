@@ -24,30 +24,31 @@
       <link href="landing/css/custom.css" rel="stylesheet">
    </head>
    <body id="page-top">
-    @include('landing.layouts.navigation')
+      @include('landing.layouts.navigation')
       <!--SLIDER Kev-->
       <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
          <ol class="carousel-indicators">
             <li data-target="#inSlider" data-slide-to="0" class="active"></li>
             <li data-target="#inSlider" data-slide-to="1"></li>
+            <li data-target="#inSlider" data-slide-to="2"></li>
          </ol>
          <div class="carousel-inner" role="listbox">
             <div class="item active">
                <div class="container">
                   <div class="carousel-caption">
-                    <!-- <h1>We craft<br/>
+                     <!-- <h1>We craft<br/>
                         brands, web apps,<br/>
                         and user interfaces<br/>
                         we are IN+ studio
-                     </h1>
-                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                     <p>
+                        </h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                        <p>
                         <a class="btn btn-lg btn-primary" href="#" role="button">READ MORE</a>
                         <a class="caption-link" href="#" role="button">Inspinia Theme</a>
-                     </p>-->
+                        </p>-->
                   </div>
-                  <div class="carousel-image wow zoomIn">
-                     <img src="landing/img/prueba.png" alt="laptop"/>
+                  <div class="carousel-image wow slideInUp">
+                     <img src="landing/img/2-2.png" alt="laptop"/>
                   </div>
                </div>
                <!-- Set background for slide in css -->
@@ -56,13 +57,30 @@
             <div class="item">
                <div class="container">
                   <div class="carousel-caption blank">
-                     <h1>We create meaningful <br/> interfaces that inspire.</h1>
-                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                     <!--   <h1>We create meaningful <br/> interfaces that inspire.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+                  </div>
+                  <div class="carousel-image wow slideInUp">
+                     <img src="landing/img/1.png" alt="laptop"/>
                   </div>
                </div>
                <!-- Set background for slide in css -->
                <div class="header-back two"></div>
+            </div>
+            <div class="item">
+               <div class="container">
+                  <div class="carousel-caption blank">
+                     <!--   <h1>We create meaningful <br/> interfaces that inspire.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+                  </div>
+               <!--   <div class="carousel-image wow slideInUp">
+                     <img src="landing/img/1.png" alt="laptop"/> 
+                  </div>-->
+               </div>
+               <!-- Set background for slide in css -->
+               <div class="header-back three"></div>
             </div>
          </div>
          <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
@@ -75,22 +93,22 @@
          </a>
       </div>
       <!--BENEFICIOS Car-->
-      <section id="beneficios" class="container services">
-         <div class="row">
+      <section id="beneficios" class="services gray-section">
+         <div class="row benefits">
             <div class="col-sm-3">
-               <h2>Constante innovación</h2>
-               <p>Creamos herramientas de alto valor
+               <h2 style="color:#337ab7">Constante innovación</h2>
+               <p align=justify>Creamos herramientas de alto valor
                   agregado que potencian la inteligencia de negocios y
                   la cooperación, apuntando a nichos desatendidos
                   dentro de las más novedosas tendencias en
                   economía integrativa, lo que asegura la
                   diferenciación y asertividad dentro de los mercados
-                  mundiales.</p>
-               <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+                  mundiales.
+               </p>
             </div>
             <div class="col-sm-3">
-               <h2>Facilidades de integración</h2>
-               <p>
+               <h2 style="color:#337ab7">Facilidades de integración</h2>
+               <p align=justify>
                   Los intercambios de asistencia técnica
                   y comercial que promovemos responden a metas de
                   avance comprometido en tiempo y espacio, que
@@ -98,11 +116,10 @@
                   aliados que se articulan según sus funciones y
                   capacidades específicas.
                </p>
-               <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
             </div>
             <div class="col-sm-3">
-               <h2>Cooperación efectiva</h2>
-               <p>
+               <h2 style="color:#337ab7">Cooperación efectiva</h2>
+               <p align=justify>
                   Los socios de proyectos y aliados
                   estratégicos de Brezza Project, S.A., pueden escoger
                   las formas de cooperación técnica y comercial que
@@ -111,11 +128,10 @@
                   la participación estable como socio de proyectos o
                   socio corporativo.         
                </p>
-               <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
             </div>
             <div class="col-sm-3">
-               <h2>Crecimiento sin límites</h2>
-               <p>
+               <h2 style="color:#337ab7">Crecimiento sin límites</h2>
+               <p align=justify>
                   El apoyo de diferentes aliados
                   estratégicos debidamente articulados, permite que
                   nuestros productos y servicios tengan una mayor
@@ -124,7 +140,6 @@
                   traduce en estabilidad y escalabilidad financiera en
                   entornos complejos.
                </p>
-               <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
             </div>
          </div>
       </section>
@@ -211,218 +226,278 @@
             </div>
          </div>
       </section>
-      <!--QUIENES SOMOS Car-->
-      <section id="nosotros" class="pricing">
+      <section id="team" class="features">
          <div class="container">
-            <div class="row m-b-lg">
-               <div class="col-lg-12 text-center">
-                  <div class="navy-line"></div>
-                  <h1>WHO ARE PUTAS</h1>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <div class="col-lg-12 text-center">
+               <div class="navy-line"></div>
+               <h1>Quiénes Somos</h1>
+               <p>Descripcion de la seccion</p>
+            </div>
+            <div class="col-lg-6 text-center">
+               <div class="col-lg-12 text-center m-t-n-lg wow zoomIn">
+                  </br>
+                  </br>
+                  <p align="left"> <img src="landing/img/quienessomos.jpg" alt="Brezza"  class="img-responsive"></p>
                </div>
             </div>
-            <div class="row">
-               <div class="col-lg-4 wow zoomIn">
-                  <ul class="pricing-plan list-unstyled">
-                     <li class="pricing-title">
-                        Basic
-                     </li>
-                     <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                     </li>
-                     <li class="pricing-price">
-                        <span>$16</span> / month
-                     </li>
-                     <li>
-                        Dashboards
-                     </li>
-                     <li>
-                        Projects view
-                     </li>
-                     <li>
-                        Contacts
-                     </li>
-                     <li>
-                        Calendar
-                     </li>
-                     <li>
-                        AngularJs
-                     </li>
-                     <li>
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="col-lg-4 wow zoomIn">
-                  <ul class="pricing-plan list-unstyled selected">
-                     <li class="pricing-title">
-                        Standard
-                     </li>
-                     <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                     </li>
-                     <li class="pricing-price">
-                        <span>$22</span> / month
-                     </li>
-                     <li>
-                        Dashboards
-                     </li>
-                     <li>
-                        Projects view
-                     </li>
-                     <li>
-                        Contacts
-                     </li>
-                     <li>
-                        Calendar
-                     </li>
-                     <li>
-                        AngularJs
-                     </li>
-                     <li>
-                        <strong>Support platform</strong>
-                     </li>
-                     <li class="plan-action">
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="col-lg-4 wow zoomIn">
-                  <ul class="pricing-plan list-unstyled">
-                     <li class="pricing-title">
-                        Premium
-                     </li>
-                     <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                     </li>
-                     <li class="pricing-price">
-                        <span>$160</span> / month
-                     </li>
-                     <li>
-                        Dashboards
-                     </li>
-                     <li>
-                        Projects view
-                     </li>
-                     <li>
-                        Contacts
-                     </li>
-                     <li>
-                        Calendar
-                     </li>
-                     <li>
-                        AngularJs
-                     </li>
-                     <li>
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                     </li>
-                  </ul>
+            <div class="col-lg-6 text-center wow fadeInDown">
+               <!--FILOSOFIA DE GESTION-->
+               <br><br><br><br>
+               <div class="accordion">
+                  <div class="panel-group" id="accordion1">
+                     <div class="panel panel-default">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" href="#collapseOne1">
+                           <div class="panel-heading actives">
+                              <h3 class="panel-title">
+                                 Brezza Project, S.A.
+                                 <i class="fa fa-angle-right pull-right"></i>
+                              </h3>
+                        </a>
+                        </div>
+                        <div id="collapseOne1" class="panel-collapse collapse in">
+                           <div class="panel-body">
+                              <div class="media accordion-inner">
+                                 <div class="media-body">
+                                    <p><%= @whoare.brezzastory%> </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                              <h3 class="panel-title">
+                                 Visión
+                                 <i class="fa fa-angle-right pull-right"></i>
+                              </h3>
+                           </a>
+                        </div>
+                        <div id="collapseThree1" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <p><%= @whoare.vision %> </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                              <h3 class="panel-title">
+                                 Misión
+                                 <i class="fa fa-angle-right pull-right"></i>
+                              </h3>
+                           </a>
+                        </div>
+                        <div id="collapseTwo1" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <p><%= @whoare.mission %> </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                              <h3 class="panel-title">
+                                 Reseña histórica
+                                 <i class="fa fa-angle-right pull-right"></i>
+                              </h3>
+                           </a>
+                        </div>
+                        <div id="collapseFour1" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <%= image_tag "bz1.png" %>
+                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><span class="fa fa-play"></span>  Ver Video</button>
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                 <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          <h4 class="modal-title">Reseña histórica</h4>
+                                       </div>
+                                       <div class="modal-body">
+                                          <iframe id="cartoonVideo" width="560" height="315" src="<%="//www.youtube.com/embed/"+@whoare.final_url %>" frameborder="0" allowfullscreen></iframe>
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
+                              <h3 class="panel-title">
+                                 Organización
+                                 <i class="fa fa-angle-right pull-right"></i>
+                              </h3>
+                           </a>
+                        </div>
+                        <div id="collapseFive1" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <p><%= @whoare.organigram %></p>
+                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">Organigrama</button>
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal2" role="dialog">
+                                 <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          <h4 class="modal-title">Organigrama</h4>
+                                       </div>
+                                       <div class="modal-body">
+                                          <p><%= @whoare.organigram %></p>
+                                          <%= image_tag @whoare.organigrampic.url, :alt => "Organigrama", :title => "Organigrama", :class => "img-responsive" %>
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--/#accordion1-->
                </div>
             </div>
-            <div class="row m-t-lg">
-               <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg">
-                  <p>*Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <span class="navy">Various versions</span>  have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+         </div>
+         <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                     <h4 class="modal-title">Reseña Historica</h4>
+                     <small class="font-bold">Intégrate y prospera.</small>
+                  </div>
+                  <div class="modal-body">
+                     <figure align="center">
+                        <iframe id="cartoonVideo" width="400" height="250" src="<%="//www.youtube.com/embed/"+@whoare.final_url %>" frameborder="0" allowfullscreen></iframe>
+                     </figure>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
                </div>
             </div>
          </div>
       </section>
-      <!--PASOS Car-->
-      <section class="cd-horizontal-timeline gray-section" id="Steps">
-   <div class="row">
-      <div class="col-lg-12 text-center">
-         <div class="navy-line"></div>
-         <h1>Participar en nuestros proyectos es muy fácil</h1>
-         <p>Cambia tu vida con nuestros innovadores proyectos en 5 simples pasos</p>
-      </div>
-   </div>
-   <div class="timeline">
-      <div class="events-wrapper">
-         <div class="events col-md-offset-2 col-md-4">
-            <ul style="list-style:none;" >
-               <li><a href="#0" data-date="28/01/2014" class="selected">Paso 1</a></li>
-               <li><a href="#0" data-date="28/02/2014">Paso 2</a></li>
-               <li><a href="#0" data-date="28/03/2014">Paso 3</a></li>
-               <li><a href="#0" data-date="28/04/2014">Paso 4</a></li>
-               <li><a href="#0" data-date="28/05/2014">Paso 5</a></li>
-            </ul>
-            <span class="filling-line" aria-hidden="true"></span>
+      <!--PASOS Car  blanco  -->
+      <section class="cd-horizontal-timeline" id="Steps">
+         <div class="row">
+            <div class="col-lg-12 text-center">
+               <div class="navy-line"></div>
+               <h1>Participar en nuestros proyectos es muy fácil</h1>
+               <p>Cambia tu vida con nuestros innovadores proyectos en 5 simples pasos</p>
+            </div>
          </div>
-         <!-- .events -->
-      </div>
-      <!-- .events-wrapper -->
-   </div>
-   <!-- .timeline -->
-   <div class="events-content">
-      <ol style="list-style:none;">
-         <li class="selected" data-date="28/01/2014">
-            <div class="row">
-               <div class="col-md-offset-1 col-md-2">
-                  </br></br>
-                  <%= image_tag @step.img.url, :alt => "Step 1", :class => "pasos-img"%>
+         <div class="timeline">
+            <div class="events-wrapper">
+               <div class="events col-md-offset-2 col-md-4">
+                  <ul style="list-style:none;" >
+                     <li><a href="#0" data-date="28/01/2014" class="selected">Paso 1</a></li>
+                     <li><a href="#0" data-date="28/02/2014">Paso 2</a></li>
+                     <li><a href="#0" data-date="28/03/2014">Paso 3</a></li>
+                     <li><a href="#0" data-date="28/04/2014">Paso 4</a></li>
+                     <li><a href="#0" data-date="28/05/2014">Paso 5</a></li>
+                  </ul>
+                  <span class="filling-line" aria-hidden="true"></span>
                </div>
-               <div class="col-md-9">
-                  <h2>Paso 1. NOMBRE DEL PASO</h2>
-                  <em>DESCRIPCION PASO</em>
-               </div>
+               <!-- .events -->
             </div>
-            </br></br>
-         </li>
-         <li data-date="28/02/2014">
-            <div class="row">
-               <div class="col-md-offset-1 col-md-2">
+            <ul class="cd-timeline-navigation">
+               <li>
+                  <a href="#0" class="prev">Prev
+                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                  </a>
+               </li>
+               <li>
+                  <a href="#0" class="next">Next
+                     <span class="glyphicon glyphicon-chevron-right" style="text-shadow: 0 0 10px #000;" aria-hidden="true"></span>
+                  </a>
+               </li>
+            </ul>
+            <!-- .events-wrapper -->
+         </div>
+         <!-- .timeline -->
+         <div class="events-content">
+            <ol style="list-style:none;">
+               <li class="selected" data-date="28/01/2014">
+                  <div class="row">
+                     <div class="col-md-offset-1 col-md-2">
+                        </br></br>
+                        <%= image_tag @step.img.url, :alt => "Step 1", :class => "pasos-img"%>
+                     </div>
+                     <div class="col-md-9">
+                        <h2>Paso 1. NOMBRE DEL PASO</h2>
+                        <em>DESCRIPCION PASO</em>
+                     </div>
+                  </div>
                   </br></br>
-                  <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
-               </div>
-               <div class="col-md-9">
-                  <h2>Paso 2. NOMBRE DEL PASO</h2>
-                  <em>DESCRIPCION DEL PASO </em>
-               </div>
-            </div>
-            </br></br>
-         </li>
-         <li data-date="28/03/2014">
-            <div class="row">
-                <div class="col-md-offset-1 col-md-2">
+               </li>
+               <li data-date="28/02/2014">
+                  <div class="row">
+                     <div class="col-md-offset-1 col-md-2">
+                        </br></br>
+                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                     </div>
+                     <div class="col-md-9">
+                        <h2>Paso 2. NOMBRE DEL PASO</h2>
+                        <em>DESCRIPCION DEL PASO </em>
+                     </div>
+                  </div>
                   </br></br>
-                  <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
-               </div>
-               <div class="col-md-9">
-                  <h2>Paso 3. NOMBRE DEL PASO</h2>
-                  <em>DESCRIPCION DEL PASO </em>
-               </div>
-            </div>
-            </br></br>
-         </li>
-         <li data-date="28/04/2014">
-            <div class="row">
-               <div class="col-md-offset-1 col-md-2">
+               </li>
+               <li data-date="28/03/2014">
+                  <div class="row">
+                     <div class="col-md-offset-1 col-md-2">
+                        </br></br>
+                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                     </div>
+                     <div class="col-md-9">
+                        <h2>Paso 3. NOMBRE DEL PASO</h2>
+                        <em>DESCRIPCION DEL PASO </em>
+                     </div>
+                  </div>
                   </br></br>
-                  <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
-               </div>
-               <div class="col-md-9">
-                  <h2>Paso 4. NOMBRE DEL PASO</h2>
-                  <em>DESCRIPCION DEL PASO </em>
-               </div>
-            </div>
-            </br></br>
-         </li>
-         <li data-date="28/05/2014">
-            <div class="row">
-               <div class="col-md-offset-1 col-md-2">
+               </li>
+               <li data-date="28/04/2014">
+                  <div class="row">
+                     <div class="col-md-offset-1 col-md-2">
+                        </br></br>
+                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                     </div>
+                     <div class="col-md-9">
+                        <h2>Paso 4. NOMBRE DEL PASO</h2>
+                        <em>DESCRIPCION DEL PASO </em>
+                     </div>
+                  </div>
                   </br></br>
-                  <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
-               </div>
-               <div class="col-md-9">
-                  <h2>Paso 5. NOMBRE DEL PASO</h2>
-                  <em>DESCRIPCION DEL PASO </em>
-               </div>
-            </div>
-            </br></br>
-         </li>
-      </ol>
-   </div>
-   <!-- .events-content -->
-</section>
+               </li>
+               <li data-date="28/05/2014">
+                  <div class="row">
+                     <div class="col-md-offset-1 col-md-2">
+                        </br></br>
+                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                     </div>
+                     <div class="col-md-9">
+                        <h2>Paso 5. NOMBRE DEL PASO</h2>
+                        <em>DESCRIPCION DEL PASO </em>
+                     </div>
+                  </div>
+                  </br></br>
+               </li>
+            </ol>
+         </div>
+         <!-- .events-content -->
+      </section>
       <!--CONTACTO Kev-->
       <section id="contact" class="gray-section contact">
          <div class="container">

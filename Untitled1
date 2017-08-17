@@ -1,0 +1,119 @@
+css
+
+/*/////////////////////////////////////////////////////////////
+              QUIENES SOMOS
+////////////////////////////////////////////////////////////*/
+.panel-default{
+  border-color: transparent;
+}
+
+.panel-default>.panel-heading,
+.panel{
+  
+  border:0 none;
+  box-shadow:none;
+}
+
+.panel-default>.panel-heading+.panel-collapse .panel-body{
+  background: #fff;
+  color: #858586;
+}
+
+.panel-body{
+  padding: 20px 20px 10px;
+}
+
+.panel-group .panel+.panel{
+  margin-top: 0px;
+  border-top: 1px solid #fff;
+}
+
+.panel-group .panel{
+  border-radius: 0;
+}
+
+.panel-heading{
+    border-radius: 0;
+}
+
+.panel-title>a{
+  color: #4e4e4e;
+}
+
+.accordion-inner img{
+  border-radius: 4px;
+}
+
+
+.panel-heading.active{
+  background: #2487cd;
+}
+
+.panel-heading.active .panel-title>a{
+  color:#fff;
+}
+
+a.accordion-toggle  i{
+  width: 40px;
+  line-height: 37px;
+  font-size: 20px;
+  margin-top: -10px;
+  text-align: center;
+  margin-right: -15px;
+  background: #00257b;
+  color:#fff;
+}
+
+.panel-heading.active a.accordion-toggle i{
+  background: #00257b;
+  color: #fff;
+}
+
+.panel-heading.active a.accordion-toggle.collapsed i{
+  background: #00257b;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .welcome-message {
+    display: none;
+  }
+}
+
+  a.accordion-toggle[aria-expanded="true"]{
+  color: #FFFFFF !important;
+  }
+
+.panel-heading.actives a{
+  color: #FFFFFF;
+  background-color: #3498DB !important;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border: 1px solid #ddd ;
+  
+}
+
+.actives {
+  background-color: #3498DB !important;
+}
+
+a.accordion-toggle[aria-expanded="true"] h3 i.fa-angle-right:before{
+  content: "\f107";
+}
+
+
+      
+      
+      
+ //detect click on the next arrow
+                  timelineComponents['timelineNavigation'].on('click', '.next', function(event){
+                    event.preventDefault();
+                    var next = timelineComponents['eventsWrapper'].find('a.selected');
+                    $(next.parent().next().children()).trigger( "click" );
+                  });
+                  //detect click on the prev arrow
+                  timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
+                    event.preventDefault();
+                    var prev = timelineComponents['eventsWrapper'].find('a.selected');
+                    $(prev.parent().prev().children()).trigger( "click" );
+                  });
