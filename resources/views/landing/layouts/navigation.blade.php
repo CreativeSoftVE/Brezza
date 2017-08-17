@@ -18,12 +18,11 @@
                <li><a class="page-scroll" href="#page-top">Inicio</a></li>
                <li><a class="page-scroll" href="#productos">Productos</a></li>
                <li><a class="page-scroll" href="#team">Nosotros</a></li>
-               <li><a class="page-scroll" href="#pricing">Únete</a></li>
                <li><a class="page-scroll" href="#contact">Contacto</a></li>
                
-               <li><a class="page-scroll" href="#contact">Administración</a></li>
+              <!-- <li><a class="page-scroll" href="#contact">Administración</a></li> -->
                
-               <li><a class="page-scroll" data-toggle="modal" data-target="#myModal7">Iniciar Sesión</a>
+               <li><a class="page-scroll disabled" data-toggle="modal" data-target="#myModal7">Iniciar Sesión</a>
                
                </li>
                

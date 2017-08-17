@@ -189,7 +189,12 @@ h1 {
     
 }
 .header-back.three {
-  background: url('../img/slider-brezza.jpg') 0% 0 no-repeat;
+  background: url('../img/slider-final-brezza.jpg') 0% 0 no-repeat;
+  background-size: 100% 570px;
+    
+}
+.header-back.four {
+  background: url('../img/slider-final-brezza2.jpg') 0% 0 no-repeat;
   background-size: 100% 570px;
     
 }

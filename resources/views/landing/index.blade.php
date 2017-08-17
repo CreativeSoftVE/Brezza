@@ -31,6 +31,7 @@
             <li data-target="#inSlider" data-slide-to="0" class="active"></li>
             <li data-target="#inSlider" data-slide-to="1"></li>
             <li data-target="#inSlider" data-slide-to="2"></li>
+            <li data-target="#inSlider" data-slide-to="3"></li>
          </ol>
          <div class="carousel-inner" role="listbox">
             <div class="item active">
@@ -47,7 +48,7 @@
                         <a class="caption-link" href="#" role="button">Inspinia Theme</a>
                         </p>-->
                   </div>
-                  <div class="carousel-image wow slideInUp">
+                  <div class="carousel-image wow slideInRight">
                      <img src="landing/img/2-2.png" alt="laptop"/>
                   </div>
                </div>
@@ -61,7 +62,7 @@
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                         <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
                   </div>
-                  <div class="carousel-image wow slideInUp">
+                  <div class="carousel-image wow slideInRight">
                      <img src="landing/img/1.png" alt="laptop"/>
                   </div>
                </div>
@@ -75,12 +76,26 @@
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                         <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
                   </div>
-               <!--   <div class="carousel-image wow slideInUp">
+                  <!--   <div class="carousel-image wow slideInRight">
                      <img src="landing/img/1.png" alt="laptop"/> 
-                  </div>-->
+                     </div>-->
                </div>
                <!-- Set background for slide in css -->
                <div class="header-back three"></div>
+            </div>
+            <div class="item">
+               <div class="container">
+                  <div class="carousel-caption blank">
+                     <!--   <h1>We create meaningful <br/> interfaces that inspire.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+                  </div>
+                  <!--   <div class="carousel-image wow slideInRight">
+                     <img src="landing/img/1.png" alt="laptop"/> 
+                     </div>-->
+               </div>
+               <!-- Set background for slide in css -->
+               <div class="header-back four"></div>
             </div>
          </div>
          <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
@@ -88,7 +103,11 @@
          <span class="sr-only">Previous</span>
          </a>
          <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
-         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform:  rotate(180deg);"></span>
          <span class="sr-only">Next</span>
          </a>
       </div>
@@ -148,21 +167,21 @@
          <div class="row">
             <div class="col-lg-12 text-center">
                <div class="navy-line"></div>
-               <h1>Más de 10 productos <br/> <span class="navy"> with many custom components</span> </h1>
-               <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+               <h1>Más de 10 productos <br/> <span class="navy"> que cambiarán el mundo</span> </h1>
+               <p>Brezza Project, intégrate y prospera</p>
             </div>
          </div>
          <div class="row">
             <div class="col-md-3 text-center wow fadeInLeft">
                <div>
-                  <i class="fa fa-mobile features-icon"></i>
-                  <h2>Aplicaciones</h2>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                  <i class="fa fa-tablet features-icon"></i>
+                  <h2><a href="#" class="btn btn-primary">Aplicaciones</a> </h2>
+                  <p>Desarrolladas por gente joven y con un mercado en continuo crecimiento</p>
                </div>
                <div class="m-t-lg">
-                  <i class="fa fa-bar-chart features-icon"></i>
-                  <h2>Responsabilidad Social</h2>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                  <i class="fa fa-user features-icon"></i>
+                  <h2><a href="#" class="btn btn-primary">Responsabilidad Social</a></h2>
+                  <p>Ya no es una moda o tendencia, sino es un factor decisivo para el desarrollo sostenible de un país</p>
                </div>
             </div>
             <div class="col-md-6 text-center  wow zoomIn">
@@ -170,14 +189,14 @@
             </div>
             <div class="col-md-3 text-center wow fadeInRight">
                <div>
-                  <i class="fa fa-envelope features-icon"></i>
-                  <h2>Franquicias</h2>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                  <i class="fa fa-connectdevelop features-icon"></i>
+                  <h2><a href="#" class="btn btn-primary">Franquicias</a></h2>
+                  <p>Una de las claves para llevar con exito el negocio es el trabajo en equipo</p>
                </div>
                <div class="m-t-lg">
-                  <i class="fa fa-google features-icon"></i>
-                  <h2>Multi-commerce</h2>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                  <i class="fa fa-skyatlas features-icon"></i>
+                  <h2><a href="#" class="btn btn-primary">Multi-commerce</a></h2>
+                  <p>Creando, desarrollando y/o adaptando nuestras estrategias para amoldarnos a los nuevos hábitos</p>
                </div>
             </div>
          </div>
@@ -192,7 +211,48 @@
                   <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
                </div>
             </div>
-            <div class="row"><br><br><br></div>
+            <div class="row" style="margin-bottom: 40px;">
+               <ul id="filters" class="clearfix">
+                  <li><span class="filter active" data-filter=".tag1,.tag2,.tag3,.tag4,.tag5">Todos</span></li>
+                  <li><span class="filter" data-filter=".tag1">Tag1</span></li>
+                  <li><span class="filter" data-filter=".tag2">Tag2</span></li>
+                  <li><span class="filter" data-filter=".tag3">Tag3</span></li>
+                  <li><span class="filter" data-filter=".tag4">Tag4</span></li>
+                  <li><span class="filter" data-filter=".tag5">Tag5</span></li>
+               </ul>
+               <div style=" height: 400px;vertical-align:middle;">
+                  <div id="portfoliolist">
+                     <a href="#">
+                        <div class="portfolio tag1 tag3 tag5" data-cat="tag1 tag3 tag5">
+                           <div class="portfolio-wrapper">
+                              <img src="landing/img/avatar1.jpg" class="img-responsive" alt="producto1">
+                              <div class="label">
+                                 <div class="label-text" >
+                     <a class="text-title" style="color:white !important">Producto1</a> 
+                     <span class="text-category" style="color:white !important"><a href="#">Tag1 </a><a href="#">Tag3 </a></span>
+                     </div>
+                     <div class="label-bg"> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </a>
+                     <a href="#">
+                        <div class="portfolio tag2 tag4 tag5" data-cat="tag2 tag4 tag5">
+                           <div class="portfolio-wrapper">
+                              <img src="landing/img/perspective.png" class="img-responsive" alt="producto1">
+                              <div class="label">
+                                 <div class="label-text" >
+                     <a class="text-title" style="color:white !important">Producto2</a> 
+                     <span class="text-category" style="color:white !important"><a href="#">Tag2 </a><a href="#">Tag4 </a><a href="#">Tag5</a></span>
+                     </div>
+                     <div class="label-bg"> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
             <div class="row">
                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
@@ -226,12 +286,13 @@
             </div>
          </div>
       </section>
+      <!--WHOARE Car-->
       <section id="team" class="features">
          <div class="container">
             <div class="col-lg-12 text-center">
                <div class="navy-line"></div>
                <h1>Quiénes Somos</h1>
-               <p>Descripcion de la seccion</p>
+               <p>"Somos mas que un equipo de investigadores,somos economía integrativa"</p>
             </div>
             <div class="col-lg-6 text-center">
                <div class="col-lg-12 text-center m-t-n-lg wow zoomIn">
@@ -246,7 +307,7 @@
                <div class="accordion">
                   <div class="panel-group" id="accordion1">
                      <div class="panel panel-default">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" href="#collapseOne1">
+                        <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" href="#collapseOne1">
                            <div class="panel-heading actives">
                               <h3 class="panel-title">
                                  Brezza Project, S.A.
@@ -266,7 +327,7 @@
                      </div>
                      <div class="panel panel-default">
                         <div class="panel-heading">
-                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                           <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
                               <h3 class="panel-title">
                                  Visión
                                  <i class="fa fa-angle-right pull-right"></i>
@@ -281,7 +342,7 @@
                      </div>
                      <div class="panel panel-default">
                         <div class="panel-heading">
-                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                           <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
                               <h3 class="panel-title">
                                  Misión
                                  <i class="fa fa-angle-right pull-right"></i>
@@ -296,7 +357,7 @@
                      </div>
                      <div class="panel panel-default">
                         <div class="panel-heading">
-                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                           <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
                               <h3 class="panel-title">
                                  Reseña histórica
                                  <i class="fa fa-angle-right pull-right"></i>
@@ -330,7 +391,7 @@
                      </div>
                      <div class="panel panel-default">
                         <div class="panel-heading">
-                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
+                           <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
                               <h3 class="panel-title">
                                  Organización
                                  <i class="fa fa-angle-right pull-right"></i>
@@ -413,14 +474,14 @@
                <!-- .events -->
             </div>
             <ul class="cd-timeline-navigation">
-               <li>
-                  <a href="#0" class="prev">Prev
-                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+               <li style="list-style-type: none">
+                  <a href="#0" class="prev" style="text-decoration:none">Prev
+                  <i class="fa fa-chevron-left"></i>
                   </a>
                </li>
-               <li>
-                  <a href="#0" class="next">Next
-                     <span class="glyphicon glyphicon-chevron-right" style="text-shadow: 0 0 10px #000;" aria-hidden="true"></span>
+               <li style="list-style-type: none">
+                  <a href="#0" class="next" style="text-decoration:none">Next
+                  <i class="fa fa-chevron-right" style="display: initial"></i>
                   </a>
                </li>
             </ul>
@@ -436,8 +497,8 @@
                         <%= image_tag @step.img.url, :alt => "Step 1", :class => "pasos-img"%>
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 1. NOMBRE DEL PASO</h2>
-                        <em>DESCRIPCION PASO</em>
+                        <h2>Paso 1. Escoge</h2>
+                        <em>Selecciona el proyecto de tu interés</em>
                      </div>
                   </div>
                   </br></br>
@@ -449,8 +510,8 @@
                         <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 2. NOMBRE DEL PASO</h2>
-                        <em>DESCRIPCION DEL PASO </em>
+                        <h2>Paso 2. Regístrate</h2>
+                        <em>Llena el formulario de registro</em>
                      </div>
                   </div>
                   </br></br>
@@ -462,8 +523,8 @@
                         <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 3. NOMBRE DEL PASO</h2>
-                        <em>DESCRIPCION DEL PASO </em>
+                        <h2>Paso 3. Evaluación</h2>
+                        <em>Evaluaremos tu solicitud y te contactaremos </em>
                      </div>
                   </div>
                   </br></br>
@@ -475,8 +536,8 @@
                         <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 4. NOMBRE DEL PASO</h2>
-                        <em>DESCRIPCION DEL PASO </em>
+                        <h2>Paso 4. Confirmación</h2>
+                        <em>Valida tu información y confirma tu participación </em>
                      </div>
                   </div>
                   </br></br>
@@ -488,8 +549,8 @@
                         <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 5. NOMBRE DEL PASO</h2>
-                        <em>DESCRIPCION DEL PASO </em>
+                        <h2>Paso 5. Certificado</h2>
+                        <em>Recibe tu acreditación y haz el seguimiento correspondiente </em>
                      </div>
                   </div>
                   </br></br>
@@ -504,48 +565,61 @@
             <div class="row m-b-lg">
                <div class="col-lg-12 text-center">
                   <div class="navy-line"></div>
-                  <h1>Contact Us</h1>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                  <h1>Contáctanos</h1>
+                  <p>Descripcion de la sección</p>
                </div>
             </div>
             <div class="row m-b-lg">
-               <div class="col-lg-3 col-lg-offset-3">
-                  <address>
-                     <strong><span class="navy">Company name, Inc.</span></strong><br/>
-                     795 Folsom Ave, Suite 600<br/>
-                     San Francisco, CA 94107<br/>
-                     <abbr title="Phone">P:</abbr> (123) 456-7890
+               <div class="col-lg-3 col-lg-offset-2">
+                  <br><br>
+                  <address align="center">
+                     <strong><span class="navy">Brezza Project, S.A.</span></strong><br/>
+                     “Barquisimeto, Lara, Venezuela”<br/>
+                     <abbr title="Phone">Teléfono:</abbr> +58 (251) 2317335
                   </address>
+                  <br><br>
+                  <div class="col-lg-12 text-center">
+                     <p class="m-t-sm">
+                        Síguenos en nuestras redes sociales
+                     </p>
+                     <ul class="list-inline social-icon">
+                        <li><a target="_blank" href="https://twitter.com/brezzaproject" title="Visitanos en Twitter"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://es-la.facebook.com/brezzaproject/" title="Visitanos en Facebook" ><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.instagram.com/brezzaproject/" title="Siguenos en Instagram"><i class="fa fa-instagram"></i></a>
+                        </li>
+                     </ul>
+                  </div>
                </div>
-               <div class="col-lg-4">
-                  <p class="text-color">
-                     Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
-                  </p>
+               <div class="col-lg-5">
+                  <div>
+                     
+                     <div class="form-group">
+                        <label class="control-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="John Doe">
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">Correo</label>
+                        <input type="text" class="form-control" id="email" placeholder="correo@ejemplo.com">
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">Mensaje</label>
+                        <textarea class="form-control" rows="5" cols="50" style="resize:vertical;" id="comment" placeholder="Escriba su mensaje..."></textarea>
+                     </div>
+                     <button class="btn btn-primary" type="submit">Enviar</button>
+                     
+                  </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-lg-12 text-center">
-                  <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
-                  <p class="m-t-sm">
-                     Or follow us on social platform
-                  </p>
-                  <ul class="list-inline social-icon">
-                     <li><a href="#"><i class="fa fa-twitter"></i></a>
-                     </li>
-                     <li><a href="#"><i class="fa fa-facebook"></i></a>
-                     </li>
-                     <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                  @include('landing.layouts.foot')
-               </div>
-            </div>
+
          </div>
       </section>
+      <div class="row gray-section">
+         <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+            @include('landing.layouts.foot')
+         </div>
+      </div>
       <script src="landing/js/jquery-2.1.1.js"></script>
       <script src="landing/js/pace.min.js"></script>
       <script src="landing/js/bootstrap.min.js"></script>
@@ -554,5 +628,6 @@
       <script src="landing/js/wow.min.js"></script>
       <script src="landing/js/inspinia.js"></script>
       <script src="landing/js/custom.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
    </body>
 </html>
