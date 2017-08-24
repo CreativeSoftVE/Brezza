@@ -385,3 +385,13 @@ $(window).on('page:load', function(){
     $('#portfoliolist').mixItUp(); // We can now reinstantiate without being blocked
 });
 
+
+///////PRELOADER
+$(document).ready(function() {
+   window.setTimeout("fadeMyDiv();", 1500); //call fade in 1 seconds
+ }
+)
+
+function fadeMyDiv() {
+   $("#preloader").fadeOut('slow');
+}

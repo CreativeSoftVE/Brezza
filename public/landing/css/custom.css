@@ -1,4 +1,33 @@
 /*/////////////////////////////////////////////////////////////
+              pre-loader
+////////////////////////////////////////////////////////////*/
+
+.preloader{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 99999;
+}
+
+.preloader .preloader-gif{
+    display: block;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    margin: -40px 0 0 -40px;
+    background: url('../img/loader.gif') no-repeat; 
+    background-size: contain;
+  
+}              
+
+
+
+/*/////////////////////////////////////////////////////////////
               BENEFICIOS
 ////////////////////////////////////////////////////////////*/
 .benefits{
@@ -128,13 +157,9 @@ Main Components
 }
 .cd-horizontal-timeline .events-wrapper::before {
   left: 0;
-  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
 }
 .cd-horizontal-timeline .events-wrapper::after {
   right: 0;
-  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
 }
 .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */

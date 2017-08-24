@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
    <head>
+      <title>Brezza Project - Intégrate y prospera</title>
+      <!-- favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+      <link rel="manifest" href="/favicons/manifest.json">
+      <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00257b">
+      <meta name="theme-color" content="#ffffff">
+      
+      <!-- meta tags -->
       <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- Add Your favicon here -->
-      <!--<link rel="icon" href="landing/img/favicon.ico">-->
-      <title>Brezza Project - Integrate y prospera</title>
-      <!-- Bootstrap core CSS -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Encubamos tu idea de negocio con el mejor equipo de profesionales. Brezza Project, intégrate y prospera ">
+      <meta name='keywords' content='brezza, project, proyectos, emprendimiento, innovación, encubadora'>
+      <meta name="robots" content="index,follow" />
+      <link rel="canonical" href="https://brezza-cecheverria1.c9users.io" />
+      <meta name="author" content="CreativeSoft C.A." />
+      <meta name="owner" content="Brezza Project S.A." />
+      
+      <!-- Facebook metadata-->
+      <meta property="og:url" content="https://brezza-cecheverria1.c9users.io" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Brezza Project - Intégrate y prospera" />
+      <meta property="og:description" content="Esta es una breve descripcion que aparecerá en facebook al ser compartido" />
+      <meta property="og:image" content="https://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+      
+      <!-- Twitter metadata-->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@brezzaproject" />
+      <meta name="twitter:creator" content="@brezzaproject" />
+      <meta property="og:url" content="https://brezza-cecheverria1.c9users.io" />
+      <meta property="og:title" content="Brezza Project - Intégrate y prospera" />
+      <meta property="og:description" content="Esta es una breve descripcion que aparecerá en twitter al ser compartido" />
+      <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
+      
+      <!-- CSS Core Styles -->
       <link href="landing/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Animation CSS -->
       <link href="landing/css/animate.min.css" rel="stylesheet">
       <link href="landing/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
+      
+      
       <!-- Custom styles for this template -->
       <link href="landing/css/style.css" rel="stylesheet">
       <link href="landing/css/custom.css" rel="stylesheet">
    </head>
    <body id="page-top">
+      <div class="preloader" id="preloader"><span class="preloader-gif"></span></div>
       @include('landing.layouts.navigation')
       <!--SLIDER Kev-->
       <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
@@ -104,10 +129,10 @@
          </a>
          <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform:  rotate(180deg);"></span>
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform:  rotate(180deg);"></span>
          <span class="sr-only">Next</span>
          </a>
       </div>
@@ -185,7 +210,7 @@
                </div>
             </div>
             <div class="col-md-6 text-center  wow zoomIn">
-               <img src="landing/img/perspective.png" alt="dashboard" class="img-responsive">
+               <img src="landing/img/imagen-central.png" alt="dashboard" class="img-responsive">
             </div>
             <div class="col-md-3 text-center wow fadeInRight">
                <div>
@@ -202,7 +227,7 @@
          </div>
       </section>
       <!--PORTAFOLIO Kev-->
-      <section id="portafolio" class="gray-section team">
+      <section id="portafolio" class="gray-section team ">
          <div class="container">
             <div class="row m-b-lg">
                <div class="col-lg-12 text-center">
@@ -211,7 +236,7 @@
                   <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
                </div>
             </div>
-            <div class="row" style="margin-bottom: 40px;">
+            <div class="row wow slideInRight" style="margin-bottom: 40px;">
                <ul id="filters" class="clearfix">
                   <li><span class="filter active" data-filter=".tag1,.tag2,.tag3,.tag4,.tag5">Todos</span></li>
                   <li><span class="filter" data-filter=".tag1">Tag1</span></li>
@@ -298,7 +323,7 @@
                <div class="col-lg-12 text-center m-t-n-lg wow zoomIn">
                   </br>
                   </br>
-                  <p align="left"> <img src="landing/img/quienessomos.jpg" alt="Brezza"  class="img-responsive"></p>
+                  <p align="left"><img src="landing/img/quienessomos.jpg" alt="Brezza"  class="img-responsive"></p>
                </div>
             </div>
             <div class="col-lg-6 text-center wow fadeInDown">
@@ -319,7 +344,9 @@
                            <div class="panel-body">
                               <div class="media accordion-inner">
                                  <div class="media-body">
-                                    <p><%= @whoare.brezzastory%> </p>
+                                    <p align=justify>Red de investigadores formados en áreas multidisciplinarias que pone
+en marcha el ingenio y la integración innovadora, para cooperar y apalancar la
+transición de nuestras sociedades a modos de vida y de negocios más sustentables.</p>
                                  </div>
                               </div>
                            </div>
@@ -336,7 +363,9 @@
                         </div>
                         <div id="collapseThree1" class="panel-collapse collapse">
                            <div class="panel-body">
-                              <p><%= @whoare.vision %> </p>
+                              <p align=justify>Destacar en la generación de productos y servicios innovadores que
+dinamicen diferentes nichos de mercado, en torno a los nuevos modos de
+participación social, la nueva arquitectura financiera mundial y el desarrollo local.</p>
                            </div>
                         </div>
                      </div>
@@ -351,41 +380,11 @@
                         </div>
                         <div id="collapseTwo1" class="panel-collapse collapse">
                            <div class="panel-body">
-                              <p><%= @whoare.mission %> </p>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                           <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
-                              <h3 class="panel-title">
-                                 Reseña histórica
-                                 <i class="fa fa-angle-right pull-right"></i>
-                              </h3>
-                           </a>
-                        </div>
-                        <div id="collapseFour1" class="panel-collapse collapse">
-                           <div class="panel-body">
-                              <%= image_tag "bz1.png" %>
-                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><span class="fa fa-play"></span>  Ver Video</button>
-                              <!-- Modal -->
-                              <div class="modal fade" id="myModal" role="dialog">
-                                 <div class="modal-dialog">
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                       <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                          <h4 class="modal-title">Reseña histórica</h4>
-                                       </div>
-                                       <div class="modal-body">
-                                          <iframe id="cartoonVideo" width="560" height="315" src="<%="//www.youtube.com/embed/"+@whoare.final_url %>" frameborder="0" allowfullscreen></iframe>
-                                       </div>
-                                       <div class="modal-footer">
-                                          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                              <p align=justify>Facilitar el intercambio de información y la integración entre
+personas, organizaciones y mercados, a través del diseño y puesta en
+funcionamiento de innovaciones tecnológicas que contribuyan a su vez con el
+incremento de la eficiencia, el mejoramiento continuo, la transparencia y la calidad
+de vida en los segmentos y espacios hacia los que enfocamos nuestra cooperación.</p>
                            </div>
                         </div>
                      </div>
@@ -400,7 +399,8 @@
                         </div>
                         <div id="collapseFive1" class="panel-collapse collapse">
                            <div class="panel-body">
-                              <p><%= @whoare.organigram %></p>
+                              <p align=justify>La organización responde a criterios de
+estructura circular, por comité y en red, según la dinámica de sus requerimientos.</p>
                               <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">Organigrama</button>
                               <!-- Modal -->
                               <div class="modal fade" id="myModal2" role="dialog">
@@ -412,8 +412,11 @@
                                           <h4 class="modal-title">Organigrama</h4>
                                        </div>
                                        <div class="modal-body">
-                                          <p><%= @whoare.organigram %></p>
-                                          <%= image_tag @whoare.organigrampic.url, :alt => "Organigrama", :title => "Organigrama", :class => "img-responsive" %>
+                                          <p align=justify>El equipo de Brezza Project, s.a., trabaja en torno a una estructura matricial
+por cuanto todos los departamentos participan en el ciclo de vida de los proyectos y
+productos de la corporación. La organización responde también a criterios de
+estructura circular, por comité y en red, según la dinámica de sus requerimientos.</p>
+                                          <img class="img-responsive" alt="Organigrama" title="Organigrama" src="landing/img/Organigrama.png">
                                        </div>
                                        <div class="modal-footer">
                                           <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -439,7 +442,7 @@
                   </div>
                   <div class="modal-body">
                      <figure align="center">
-                        <iframe id="cartoonVideo" width="400" height="250" src="<%="//www.youtube.com/embed/"+@whoare.final_url %>" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="cartoonVideo" width="560" height="315" src="https://www.youtube.com/embed/qfNmyxV2Ncw" frameborder="0" allowfullscreen></iframe> frameborder="0" allowfullscreen></iframe>
                      </figure>
                   </div>
                   <div class="modal-footer">
@@ -459,7 +462,7 @@
                <p>Cambia tu vida con nuestros innovadores proyectos en 5 simples pasos</p>
             </div>
          </div>
-         <div class="timeline">
+         <div class="timeline wow zoomIn">
             <div class="events-wrapper">
                <div class="events col-md-offset-2 col-md-4">
                   <ul style="list-style:none;" >
@@ -488,7 +491,7 @@
             <!-- .events-wrapper -->
          </div>
          <!-- .timeline -->
-         <div class="events-content">
+         <div class="events-content ">
             <ol style="list-style:none;">
                <li class="selected" data-date="28/01/2014">
                   <div class="row">
@@ -594,7 +597,6 @@
                </div>
                <div class="col-lg-5">
                   <div>
-                     
                      <div class="form-group">
                         <label class="control-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="John Doe">
@@ -608,11 +610,9 @@
                         <textarea class="form-control" rows="5" cols="50" style="resize:vertical;" id="comment" placeholder="Escriba su mensaje..."></textarea>
                      </div>
                      <button class="btn btn-primary" type="submit">Enviar</button>
-                     
                   </div>
                </div>
             </div>
-
          </div>
       </section>
       <div class="row gray-section">

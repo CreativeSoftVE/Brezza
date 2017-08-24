@@ -50,7 +50,7 @@
                 <a href="{{ url('/admin/minor') }}" title="Mensajes"><i class="fa fa-envelope"></i> <span class="nav-label">Mensajes</span> </a>
             </li>
             <li>
-                <a href="{{ url('/admin/minor') }}" title="Usuarios"><i class="fa fa-user-circle"></i> <span class="nav-label">Usuarios</span> </a>
+                <a href="{{ url('/admin/users') }}" title="Usuarios"><i class="fa fa-user-circle"></i> <span class="nav-label">Usuarios</span> </a>
             </li>
         </ul>
         
