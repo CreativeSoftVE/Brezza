@@ -22,7 +22,12 @@
 */
     Route::group(['prefix' => 'admin'],function(){
         Route::get('/', 'AdminController@index')->name("main");
+        Route::get('/minor', 'AdminController@minor')->name("minor");
         Route::resource('/users', 'UsersController');
         Route::resource('/messages', 'MessagesController');
-        Route::get('/minor', 'AdminController@minor')->name("minor");
+        
     });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

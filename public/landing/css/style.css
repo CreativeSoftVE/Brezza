@@ -52,7 +52,7 @@ h1 {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 200;
+    z-index: 10;
   }
   /* Flip around the padding for proper display in narrow viewports */
   .navbar-wrapper > .container {
