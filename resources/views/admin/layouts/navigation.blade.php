@@ -35,10 +35,10 @@
                 <a href="{{ url('/admin/minor') }}" title="Gestión de contenido"><i class="fa fa-cogs"></i> <span class="nav-label">Gestión de contenido</span> </a>
             </li>
             <li>
-                <a href="{{ url('/admin/minor') }}" title="Categorias"><i class="fa fa-tags"></i> <span class="nav-label">Categorias</span> </a>
+                <a href="{{ route('categories.index') }}" title="Categorias"><i class="fa fa-tags"></i> <span class="nav-label">Categorias</span> </a>
             </li>
             <li>
-                <a href="{{ url('/admin/minor') }}" title="Etiquetas"><i class="fa fa-tags"></i> <span class="nav-label">Etiquetas</span> </a>
+                <a href="{{ route('tags.index') }}" title="Etiquetas"><i class="fa fa-tags"></i> <span class="nav-label">Etiquetas</span> </a>
             </li>
             <li>
                 <a href="{{ url('/admin/minor') }}" title="Productos"><i class="fa fa-briefcase"></i> <span class="nav-label">Productos</span> </a>

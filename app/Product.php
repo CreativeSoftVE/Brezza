@@ -9,7 +9,7 @@ class Product extends Model
 {
     use Sluggable;
     protected $table = "products";
-    protected $fillable = ['name','description','category_id'.'user_id'];
+    protected $fillable = ['name','description','category_id','user_id'];
     
     public function category(){
         return $this-> belongsTo('App\Category');
@@ -25,6 +25,10 @@ class Product extends Model
     
     public function tags(){
         return $this->belongsToMany('App\Tag');
+    }
+    
+    public function scopeSearch($query, $name){
+        return $query->where('name', 'LIKE', "%$name%");
     }
     
     /**

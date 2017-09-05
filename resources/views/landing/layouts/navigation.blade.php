@@ -1,4 +1,4 @@
-<div class="navbar-wrapper">
+<div id="thenav"  class="navbar-wrapper">
    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
          <div class="navbar-header page-scroll">

@@ -8,7 +8,7 @@
       <h2 class="text-dark-blue"><strong>Usuarios</strong></h2>
       <ol class="breadcrumb">
          <li>
-            <a href="/admin/">Inicio</a>
+            <a href="{{ url('/admin') }}">Inicio</a>
          </li>
          <li class="active">
             <strong class="text-blue">Listado</strong>
@@ -16,13 +16,14 @@
       </ol>
    </div>
 </div>
+<div class=""><br/>@include('flash::message')</div>
 <div class="wrapper wrapper-content">
    <div class="row">
       <div class="col-sm-12">
          <div class="ibox float-e-margins">
             <div class="ibox-title">
                <h4 class="text-dark-blue">
-                  <strong>Listado: Beneficios</strong>
+                  <strong>Listado: Usuarios</strong>
                </h4>
             </div>
             <div class="ibox-content">
@@ -52,8 +53,8 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="{{ route('users.edit', $user->id)}}" class="btn btn-warning btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="{{ route('users.destroy', $user->id)}}" onclick="return confirm('Seguro que deseas eliminar este usuario?')" class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                                 @endForeach
@@ -70,12 +71,5 @@
       </div>
    </div>
 </div>
-
-
-
-
-
-
-    
-    
+   
 @endsection

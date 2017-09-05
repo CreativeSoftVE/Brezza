@@ -15,6 +15,11 @@
     Route::get('/', function () {
         return view('landing.index');
     });
+    Route::get('/categories/{id}', function () {
+        return view('landing.categories', [
+            'uses' => 'ProductsController@listByCategory',
+            'as' => 'products.listByCategory']);
+    });
 
 
 /*
@@ -23,9 +28,32 @@
     Route::group(['prefix' => 'admin'],function(){
         Route::get('/', 'AdminController@index')->name("main");
         Route::get('/minor', 'AdminController@minor')->name("minor");
-        Route::resource('/users', 'UsersController');
-        Route::resource('/messages', 'MessagesController');
         
+        Route::resource('/users', 'UsersController');
+        Route::get('/users/{id}/destroy', [
+            'uses' => 'UsersController@destroy',
+            'as' => 'users.destroy']);
+            
+        Route::resource('/products', 'ProductsController');
+        Route::get('/products/{id}/destroy', [
+            'uses' => 'ProductsController@destroy',
+            'as' => 'products.destroy']);    
+            
+        Route::resource('categories', 'CategoriesController');
+        Route::get('categories/{id}/destroy', [
+            'uses' => 'CategoriesController@destroy',
+            'as' => 'admin.categories.destroy']);
+        
+        Route::resource('/tags', 'TagsController');
+        Route::get('tags/{id}/destroy', [
+            'uses' => 'TagsController@destroy',
+            'as' => 'tags.destroy']);
+            
+        Route::resource('/messages', 'MessagesController');
+        Route::get('/,messages/{id}/destroy', [
+            'uses' => 'MessagesController@destroy',
+            'as' => 'messages.destroy']); 
+            
     });
 
 Auth::routes();

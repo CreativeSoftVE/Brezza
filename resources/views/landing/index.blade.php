@@ -239,9 +239,9 @@
             <div class="row wow slideInRight" style="margin-bottom: 40px;">
                <ul id="filters" class="clearfix">
                   <li><span class="filter active" data-filter=".tag1,.tag2,.tag3,.tag4,.tag5">Todos</span></li>
-                  <li><span class="filter" data-filter=".tag1">Tag1</span></li>
+                  <li><span class="filter" data-filter=".tag1">Ecologia</span></li>
                   <li><span class="filter" data-filter=".tag2">Tag2</span></li>
-                  <li><span class="filter" data-filter=".tag3">Tag3</span></li>
+                  <li><span class="filter" data-filter=".tag3">Mercado</span></li>
                   <li><span class="filter" data-filter=".tag4">Tag4</span></li>
                   <li><span class="filter" data-filter=".tag5">Tag5</span></li>
                </ul>
@@ -250,11 +250,11 @@
                      <a href="#">
                         <div class="portfolio tag1 tag3 tag5" data-cat="tag1 tag3 tag5">
                            <div class="portfolio-wrapper">
-                              <img src="landing/img/avatar1.jpg" class="img-responsive" alt="producto1">
+                              <img src="landing/img/brezza-energy.jpg" class="img-responsive" alt="producto1">
                               <div class="label">
                                  <div class="label-text" >
-                     <a class="text-title" style="color:white !important">Producto1</a> 
-                     <span class="text-category" style="color:white !important"><a href="#">Tag1 </a><a href="#">Tag3 </a></span>
+                     <a class="text-title" style="color:white !important">Brezza Energy</a> 
+                     <span class="text-category" style="color:white !important"><a href="#">Ecologia </a><a href="#">Mercado </a><a href="#">Tag5 </a></span>
                      </div>
                      <div class="label-bg"> </div>
                      </div>
@@ -264,10 +264,10 @@
                      <a href="#">
                         <div class="portfolio tag2 tag4 tag5" data-cat="tag2 tag4 tag5">
                            <div class="portfolio-wrapper">
-                              <img src="landing/img/perspective.png" class="img-responsive" alt="producto1">
+                              <img src="landing/img/sector-agroalimentario.jpg" class="img-responsive" alt="producto1">
                               <div class="label">
                                  <div class="label-text" >
-                     <a class="text-title" style="color:white !important">Producto2</a> 
+                     <a class="text-title" style="color:white !important">Sector Agroalimentario</a> 
                      <span class="text-category" style="color:white !important"><a href="#">Tag2 </a><a href="#">Tag4 </a><a href="#">Tag5</a></span>
                      </div>
                      <div class="label-bg"> </div>
@@ -401,7 +401,7 @@ de vida en los segmentos y espacios hacia los que enfocamos nuestra cooperación
                            <div class="panel-body">
                               <p align=justify>La organización responde a criterios de
 estructura circular, por comité y en red, según la dinámica de sus requerimientos.</p>
-                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">Organigrama</button>
+                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" id="btnmodal12" data-target="#myModal2">Organigrama</button>
                               <!-- Modal -->
                               <div class="modal fade" id="myModal2" role="dialog">
                                  <div class="modal-dialog">
@@ -419,7 +419,7 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                                           <img class="img-responsive" alt="Organigrama" title="Organigrama" src="landing/img/Organigrama.png">
                                        </div>
                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                          <button type="button" id="closemodal12"  class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                                        </div>
                                     </div>
                                  </div>
@@ -446,11 +446,17 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                      </figure>
                   </div>
                   <div class="modal-footer">
-                     <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                     <button type="button"  class="btn btn-white" data-dismiss="modal">Close</button>
                      <button type="button" class="btn btn-primary">Save changes</button>
                   </div>
                </div>
             </div>
+         </div>
+         
+      </section>
+      <section id="rellenob" display="none">
+         <div class="row" >
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
       </section>
       <!--PASOS Car  blanco  -->
@@ -497,7 +503,7 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                   <div class="row">
                      <div class="col-md-offset-1 col-md-2">
                         </br></br>
-                        <%= image_tag @step.img.url, :alt => "Step 1", :class => "pasos-img"%>
+                        <img src="landing/img/avatar1.jpg" alt="Paso 1" class="pasos-img">
                      </div>
                      <div class="col-md-9">
                         <h2>Paso 1. Escoge</h2>
@@ -629,5 +635,28 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
       <script src="landing/js/inspinia.js"></script>
       <script src="landing/js/custom.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+   
+         <script type="text/javascript" >
+            $(document).ready(function() {  
+               $("#rellenob").hide(); 
+                $('button#btnmodal12').click(function() {
+                    $('#thenav').css('z-index', '0px');
+                    $('.navbar').css('z-index', '0px');
+                     $("nav.navbar-default").hide();
+                     
+                     $("#rellenob").show();
+                });
+                $('#myModal2').on('hidden.bs.modal', function () {
+                       $("nav.navbar-default").show();
+                       $("#rellenob").hide();  
+                  })
+                $('#closemodal12').click(function() {
+                     
+                });
+                     
+            });
+         </script>
+         
    </body>
+   
 </html>

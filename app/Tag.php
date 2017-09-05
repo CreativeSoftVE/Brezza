@@ -13,4 +13,8 @@ class Tag extends Model
     {
         return $this->belongsToMany('App\Product')->withTimestamps();
     }
+    
+    public function scopeSearch($query, $name){
+        $query->where('name', 'LIKE', "%$name%");
+    }
 }

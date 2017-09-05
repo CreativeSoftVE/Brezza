@@ -1,0 +1,73 @@
+@extends('admin.layouts.app')
+
+@section('title', 'Lista de etiquetas')
+
+@section('content')
+<div class="row wrapper border-bottom white-bg page-heading">
+   <div class="col-lg-10">
+      <h2 class="text-dark-blue"><strong>Tags</strong></h2>
+      <ol class="breadcrumb">
+         <li>
+            <a href="{{ url('/admin') }}">Inicio</a>
+         </li>
+         <li class="active">
+            <strong class="text-blue">Listado</strong>
+         </li>
+      </ol>
+   </div>
+</div>
+<div class=""><br/>@include('flash::message')</div>
+<div class="wrapper wrapper-content">
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="ibox float-e-margins">
+            <div class="ibox-title">
+               <h4 class="text-dark-blue">
+                  <strong>Listado: Tags</strong>
+               </h4>
+            </div>
+            <div class="ibox-content">
+                <a href="{{route('tags.create') }}" class="btn btn-info btn-sm">Agregar nuevo tag</a> 
+                {!! Form::open(['route' => 'tags.index', 'method' => 'GET', 'class'=> 'navbar-form pull-right']) !!}
+                <div class="input-group">
+                  {!! Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Buscar tag...', 'require']) !!}
+                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                </div>
+                {!! Form::close() !!}
+                
+               
+                <br/><br/>
+                <div class="ibox float-e-margins">
+                    <div class="row">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                            </thead>
+                            <tbody>
+                                @Foreach($tags as $tag) 
+                                <tr>
+                                    <th scope="row">{{$tag->id}}</th>
+                                    <td>{{$tag -> name}}</td>
+                                    <td>
+                                        <a href="{{ route('tags.edit', $tag->id)}}" class="btn btn-warning btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="{{ route('tags.destroy', $tag->id)}}" onclick="return confirm('Seguro que deseas eliminar esta etiqueta?')" class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                @endForeach
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            {!! $tags->render()!!}
+                        </div>
+
+                    </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+   
+@endsection
