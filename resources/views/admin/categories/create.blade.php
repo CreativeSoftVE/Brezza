@@ -44,7 +44,11 @@
         </div>
         <div class="form-group">
             {!! Form::label('textinicio', 'Texto Inicio') !!}
-            {{ Form::text('textinicio', null, ['class' => 'form-control', 'placeholder' => 'Texto Inicio...', 'required']) }}
+            {{ Form::text('landing1', null, ['class' => 'form-control', 'placeholder' => 'Texto Inicio...', 'required']) }}
+        </div>
+        <div class="form-group">
+            {!! Form::label('textinicio', 'Landing Text') !!}
+            {{ Form::text('landing2', null, ['class' => 'form-control', 'placeholder' => 'Texto Inicio...', 'required']) }}
         </div>
         <div class="form-group">
                         <label class="control-label">Ícono<label for="category_icon" class="control-label error" style="margin-bottom: 0px;"></label></label>
@@ -93,6 +97,7 @@
                               <label class="btn btn-sm btn-primary btn-file">
                               Buscar imagen... <input  name="banner" id="category_banner" type="file" hidden>
                               </label>
+                              <input type="hidden" name="banner" id="banner" value="categorybanner"/>
                            </div>
         <div class="form-group">
             {!! Form::submit('Registrar', ['class'=> 'btn btn-primary'])  !!}

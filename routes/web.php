@@ -12,15 +12,34 @@
 */
 
 
-    Route::get('/', function () {
-        return view('landing.index');
-    });
-    Route::get('/categories/{id}', function () {
-        return view('landing.categories', [
+    Route::get('/', [
+            'uses' => 'HomeController@landing',
+            'as' => 'root']);
+    
+    Route::get('/categories/{id}/', [
             'uses' => 'ProductsController@listByCategory',
             'as' => 'products.listByCategory']);
-    });
+    
+    Route::get('/tags/{id}/', [
+            'uses' => 'ProductsController@listByTag',
+            'as' => 'products.listByTag']);
+            
+    
+    Route::get('/product/{id}/', [
+            'uses' => 'ProductsController@frontView',
+            'as' => 'products.frontView']);
 
+
+
+
+
+
+    Route::get('lang/{lang}', function ($lang) {
+        session(['lang' => $lang]);
+        return \Redirect::back();
+    })->where([
+        'lang' => 'en|es'
+    ]);
 
 /*
 * Ruta destinada a todas las operaciones del admin
@@ -53,9 +72,28 @@
         Route::get('/,messages/{id}/destroy', [
             'uses' => 'MessagesController@destroy',
             'as' => 'messages.destroy']); 
+        
+        
+        
+        /*
+        * Gestion de contenido
+        */
+        Route::resource('/footers', 'FootersController');
+        Route::get('footers/{id}/destroy', [
+            'uses' => 'FootersController@destroy',
+            'as' => 'admin.footers.destroy']);
+        
+        Route::resource('contacts', 'ContactsController');
+        Route::get('contacts/{id}/destroy', [
+            'uses' => 'ContactsController@destroy',
+            'as' => 'admin.contacts.destroy']);
+        
+        Route::resource('benefits', 'BenefitsController');
+        Route::get('benefits/{id}/destroy', [
+            'uses' => 'BenefitsController@destroy',
+            'as' => 'admin.benefits.destroy']);
             
     });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

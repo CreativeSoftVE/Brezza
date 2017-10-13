@@ -40,6 +40,15 @@
                             {!! Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Nombre del tag', 'require']) !!}
                         </div>
                       </div>
+                       <div class="form-group">
+                        <label for="example-text-input" class="col-2 col-form-label">Name</label>
+                     
+                              <input type="hidden" name="banner" id="banner" value="categorybanner"/>
+                          
+                        <div class="col-10">
+                            {!! Form::text('name2',null,['class'=>'form-control', 'placeholder'=>'Tag Name', 'require']) !!}
+                        </div>
+                      </div>
                       <div class="form-group">
                           {!! Form::submit('Registrar',  ['class'=>'btn btn-success']); !!}
                       </div>

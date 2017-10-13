@@ -9,7 +9,6 @@
       <link rel="manifest" href="/favicons/manifest.json">
       <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00257b">
       <meta name="theme-color" content="#ffffff">
-      
       <!-- meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,14 +19,12 @@
       <link rel="canonical" href="https://brezza-cecheverria1.c9users.io" />
       <meta name="author" content="CreativeSoft C.A." />
       <meta name="owner" content="Brezza Project S.A." />
-      
       <!-- Facebook metadata-->
       <meta property="og:url" content="https://brezza-cecheverria1.c9users.io" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Brezza Project - Intégrate y prospera" />
       <meta property="og:description" content="Esta es una breve descripcion que aparecerá en facebook al ser compartido" />
       <meta property="og:image" content="https://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
-      
       <!-- Twitter metadata-->
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@brezzaproject" />
@@ -36,19 +33,17 @@
       <meta property="og:title" content="Brezza Project - Intégrate y prospera" />
       <meta property="og:description" content="Esta es una breve descripcion que aparecerá en twitter al ser compartido" />
       <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
-      
       <!-- CSS Core Styles -->
       <link href="landing/css/bootstrap.min.css" rel="stylesheet">
       <link href="landing/css/animate.min.css" rel="stylesheet">
-      <link href="landing/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-      
-      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
       <!-- Custom styles for this template -->
       <link href="landing/css/style.css" rel="stylesheet">
       <link href="landing/css/custom.css" rel="stylesheet">
    </head>
    <body id="page-top">
       <div class="preloader" id="preloader"><span class="preloader-gif"></span></div>
+      @include('landing.layouts.lang')
       @include('landing.layouts.navigation')
       <!--SLIDER Kev-->
       <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
@@ -136,53 +131,71 @@
          <span class="sr-only">Next</span>
          </a>
       </div>
-      <!--BENEFICIOS Car-->
+      <!--  X BENEFICIOS Car-->
       <section id="beneficios" class="services gray-section">
          <div class="row benefits">
             <div class="col-sm-3">
-               <h2 style="color:#337ab7">Constante innovación</h2>
-               <p align=justify>Creamos herramientas de alto valor
-                  agregado que potencian la inteligencia de negocios y
-                  la cooperación, apuntando a nichos desatendidos
-                  dentro de las más novedosas tendencias en
-                  economía integrativa, lo que asegura la
-                  diferenciación y asertividad dentro de los mercados
-                  mundiales.
+               <h2 style="color:#337ab7">
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> titulo12 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $benefits -> titulo1 }}
+                  @endif
+               </h2>
+               <p align=justify>
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> descripcion12 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $contacts -> descripcion1 }}
+                  @endif
                </p>
             </div>
             <div class="col-sm-3">
-               <h2 style="color:#337ab7">Facilidades de integración</h2>
+               <h2 style="color:#337ab7">
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> titulo22 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $benefits -> titulo2 }}
+                  @endif
+               </h2>
                <p align=justify>
-                  Los intercambios de asistencia técnica
-                  y comercial que promovemos responden a metas de
-                  avance comprometido en tiempo y espacio, que
-                  representan ahorros y ganancias para todos los
-                  aliados que se articulan según sus funciones y
-                  capacidades específicas.
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> descripcion22 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $contacts -> descripcion2 }}
+                  @endif
                </p>
             </div>
             <div class="col-sm-3">
-               <h2 style="color:#337ab7">Cooperación efectiva</h2>
+               <h2 style="color:#337ab7">
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> titulo32 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $benefits -> titulo3 }}
+                  @endif
+               </h2>
                <p align=justify>
-                  Los socios de proyectos y aliados
-                  estratégicos de Brezza Project, S.A., pueden escoger
-                  las formas de cooperación técnica y comercial que
-                  más se ajusten a sus necesidades, que van desde la
-                  articulación puntual en inversiones temporales hasta
-                  la participación estable como socio de proyectos o
-                  socio corporativo.         
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> descripcion32 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $contacts -> descripcion3 }}
+                  @endif         
                </p>
             </div>
             <div class="col-sm-3">
-               <h2 style="color:#337ab7">Crecimiento sin límites</h2>
+               <h2 style="color:#337ab7">
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> titulo42 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $benefits -> titulo4 }}
+                  @endif
+               </h2>
                <p align=justify>
-                  El apoyo de diferentes aliados
-                  estratégicos debidamente articulados, permite que
-                  nuestros productos y servicios tengan una mayor
-                  penetración de mercado con menor esfuerzo y
-                  recursos en los procesos requeridos, lo cual se
-                  traduce en estabilidad y escalabilidad financiera en
-                  entornos complejos.
+                  @if (App::getLocale() == 'en')
+                  {{ $benefits -> descripcion42 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $contacts -> descripcion4 }}
+                  @endif
                </p>
             </div>
          </div>
@@ -200,12 +213,22 @@
             <div class="col-md-3 text-center wow fadeInLeft">
                <div>
                   <i class="fa fa-tablet features-icon"></i>
-                  <h2><a href="#" class="btn btn-primary">Aplicaciones</a> </h2>
+                  <h2><a href="/categories/1" class="btn btn-primary"> @if (App::getLocale() == 'en')
+                     Apps
+                     @elseif (App::getLocale() == 'es')
+                     {{ $categories[0]->name }}
+                     @endif</a> 
+                  </h2>
                   <p>Desarrolladas por gente joven y con un mercado en continuo crecimiento</p>
                </div>
                <div class="m-t-lg">
                   <i class="fa fa-user features-icon"></i>
-                  <h2><a href="#" class="btn btn-primary">Responsabilidad Social</a></h2>
+                  <h2><a href="/categories/2" class="btn btn-primary"> @if (App::getLocale() == 'en')
+                     Social Responsability
+                     @elseif (App::getLocale() == 'es')
+                     {{ $categories[1]->name }}
+                     @endif</a> 
+                  </h2>
                   <p>Ya no es una moda o tendencia, sino es un factor decisivo para el desarrollo sostenible de un país</p>
                </div>
             </div>
@@ -215,18 +238,28 @@
             <div class="col-md-3 text-center wow fadeInRight">
                <div>
                   <i class="fa fa-connectdevelop features-icon"></i>
-                  <h2><a href="#" class="btn btn-primary">Franquicias</a></h2>
+                  <h2><a href="/categories/3" class="btn btn-primary"> @if (App::getLocale() == 'en')
+                     Franchises
+                     @elseif (App::getLocale() == 'es')
+                     {{ $categories[2]->name }}
+                     @endif</a> 
+                  </h2>
                   <p>Una de las claves para llevar con exito el negocio es el trabajo en equipo</p>
                </div>
                <div class="m-t-lg">
                   <i class="fa fa-skyatlas features-icon"></i>
-                  <h2><a href="#" class="btn btn-primary">Multi-commerce</a></h2>
+                  <h2><a href="/categories/4" class="btn btn-primary"> @if (App::getLocale() == 'en')
+                     Multi-commerce
+                     @elseif (App::getLocale() == 'es')
+                     {{ $categories[3]->name }}
+                     @endif</a> 
+                  </h2>
                   <p>Creando, desarrollando y/o adaptando nuestras estrategias para amoldarnos a los nuevos hábitos</p>
                </div>
             </div>
          </div>
       </section>
-      <!--PORTAFOLIO Kev-->
+      <!--  X PORTAFOLIO Kev-->
       <section id="portafolio" class="gray-section team ">
          <div class="container">
             <div class="row m-b-lg">
@@ -238,19 +271,50 @@
             </div>
             <div class="row wow slideInRight" style="margin-bottom: 40px;">
                <ul id="filters" class="clearfix">
-                  <li><span class="filter active" data-filter=".tag1,.tag2,.tag3,.tag4,.tag5">Todos</span></li>
+                  <?php $lostags = '';?>
+                  @if (App::getLocale() == 'en')
+                  @foreach($tags as $tag)
+                  <?php 
+                     if ($tag!=$tags->last()){
+                        $lostags = $lostags.'.'.$tag->name2.',';
+                     }
+                     else{
+                        $lostags = $lostags.'.'.$tag->name2;
+                     }
+                     ?>
+                  @endforeach             
+                  @elseif (App::getLocale() == 'es')
+                  @foreach($tags as $tag)
+                  <?php 
+                     if ($tag!=$tags->last()){
+                        $lostags = $lostags.'.'.$tag->name.',';
+                     }
+                     else{
+                        $lostags = $lostags.'.'.$tag->name;
+                     }
+                     ?>
+                  @endforeach              
+                  @endif
+                  <li><span class="filter active" data-filter=".tag1,.tag2,.tag3,.tag4,.tag5,<?= $lostags ?>">Todos</span></li>
                   <li><span class="filter" data-filter=".tag1">Ecologia</span></li>
                   <li><span class="filter" data-filter=".tag2">Tag2</span></li>
                   <li><span class="filter" data-filter=".tag3">Mercado</span></li>
                   <li><span class="filter" data-filter=".tag4">Tag4</span></li>
-                  <li><span class="filter" data-filter=".tag5">Tag5</span></li>
+                  @foreach ($tags as $tag)
+                  @if (App::getLocale() == 'en')
+                  <?php $tagname = $tag->name2 ?>
+                  @elseif (App::getLocale() == 'es')
+                  <?php $tagname = $tag->name ?>
+                  @endif
+                  <li><span class="filter" data-filter=".<?= $tagname ?>"><?= $tagname ?></span></li>
+                  @endforeach
                </ul>
                <div style=" height: 400px;vertical-align:middle;">
-                  <div id="portfoliolist">
+                  <div id="portfoliolist2">
                      <a href="#">
-                        <div class="portfolio tag1 tag3 tag5" data-cat="tag1 tag3 tag5">
+                        <div class="portfolio tag1 tag3 tag5 Mercado" data-cat="tag1 tag3 Mercado">
                            <div class="portfolio-wrapper">
-                              <img src="landing/img/brezza-energy.jpg" class="img-responsive" alt="producto1">
+                              <img src="landing/img/brezza-energy.jpg"  class="img-responsive" alt="producto1">
                               <div class="label">
                                  <div class="label-text" >
                      <a class="text-title" style="color:white !important">Brezza Energy</a> 
@@ -264,7 +328,7 @@
                      <a href="#">
                         <div class="portfolio tag2 tag4 tag5" data-cat="tag2 tag4 tag5">
                            <div class="portfolio-wrapper">
-                              <img src="landing/img/sector-agroalimentario.jpg" class="img-responsive" alt="producto1">
+                              <img src="landing/img/sector-agroalimentario (2).jpg" class="img-responsive" alt="producto1">
                               <div class="label">
                                  <div class="label-text" >
                      <a class="text-title" style="color:white !important">Sector Agroalimentario</a> 
@@ -275,6 +339,40 @@
                      </div>
                      </div>
                      </a>
+                     @foreach($products as $product)
+                     <a href="{{ route('products.frontView', $product->id)}}">
+                        <?php $mistags = '';?>
+                        @foreach($product->tags as $tag)
+                        @if (App::getLocale() == 'en')
+                        <?php $tagname = $tag->name2 ?>
+                        @elseif (App::getLocale() == 'es')
+                        <?php $tagname = $tag->name ?>
+                        @endif
+                        <?php $mistags = $mistags.' '.$tagname;
+                           ?>
+                        @endforeach
+                        <div class="portfolio <?= $mistags; ?> " data-cat="<?= $mistags; ?>">
+                           <div class="portfolio-wrapper">
+                              <img src="landing/img/sector-agroalimentario.jpg" class="img-responsive" alt="producto1">
+                              <div class="label">
+                                 <div class="label-text" >
+                     <a href="{{ route('products.frontView', $product->id)}}" class="text-title" style="color:white !important"><?= $product->name; ?></a> 
+                     <span class="text-category" style="color:white !important">@foreach($product->tags as $tag)
+                     @if (App::getLocale() == 'en')
+                     <?php $tagname = $tag->name2 ?>
+                     @elseif (App::getLocale() == 'es')
+                     <?php $tagname = $tag->name ?>
+                     @endif
+                     <a href="{{ route('products.listByTag', $tag->id)}}"><?= $tagname; ?></a>
+                     @endforeach
+                     </span>
+                     </div>
+                     <div class="label-bg"> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </a>
+                     @endforeach
                   </div>
                </div>
             </div>
@@ -292,20 +390,53 @@
                <div class="col-lg-12 text-center wow zoomIn">
                   <i class="fa fa-comment big-icon"></i>
                   <h1>
-                     Lo que dicen los medios
+                     {{ trans('app.medios') }}
                   </h1>
                   <br>
-                  <div class="testimonials-text">
-                     <h5>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." </h5>
+                  <div id="slides">
+                     <ul>
+                        <li class="slide">
+                           <div class="quoteContainer">
+                              <p class="quote-phrase"><span class="quote-marks">"</span> I was literally BLOWN AWAY by Company A's work! They went above and beyond all of our expectations with design, usability. and branding, I will reccommend them to everyone I know!<class="quote-marks">"</span>
+                              </p>
+                           </div>
+                           <div class="authorContainer">
+                              <p class="quote-author">John Doe // Local Business Owner</p>
+                           </div>
+                        </li>
+                        <li class="slide">
+                           <div class="quoteContainer">
+                              <p class="quote-phrase"><span class="quote-marks">"</span>
+                                 I could not stop staring! Company A's Web Solutions are by far the most elegant solutions, you can't beat their quality and attention to detail!
+                                 <span class="quote-marks">"</span>
+                              </p>
+                           </div>
+                           <div class="authorContainer">
+                              <p class="quote-author">Andy Fakename // CEO: Andy's Camping Supplies</p>
+                           </div>
+                        </li>
+                        <li class="slide">
+                           <div class="quoteContainer">
+                              <p class="quote-phrase"><span class="quote-marks">"</span>Carl Fakeguy, was the most helpful designer I've ever hired. He listened to my ideas and advised against things that could negatively affect my CEO. Company A is by far the most generous and helpful company, 5/5!<span class="quote-marks">"</span>
+                              </p>
+                           </div>
+                           <div class="authorContainer">
+                              <p class="quote-author">Janice Falsename</p>
+                           </div>
+                        </li>
+                     </ul>
                   </div>
-                  <small>
-                  <strong>Adrian Garcia - 12.02.2014</strong>
-                  </small>
+                  <!--<div class="testimonials-text">
+                     <h5>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." </h5>
+                     </div>
+                     <small>
+                     <strong>Adrian Garcia - 12.02.2014</strong>
+                     </small>-->
                </div>
                <div class="btn-bar">
                   <div id="buttons">
-                     <a id="prev" href="#">.</a>
-                     <a id="next" href="#">.</a> 
+                     <a id="prev" href="#" class="fa fa-chevron-left"></a>
+                     <a id="next" href="#" class="fa fa-chevron-right"></a> 
                   </div>
                </div>
             </div>
@@ -316,8 +447,20 @@
          <div class="container">
             <div class="col-lg-12 text-center">
                <div class="navy-line"></div>
-               <h1>Quiénes Somos</h1>
-               <p>"Somos mas que un equipo de investigadores,somos economía integrativa"</p>
+               <h1>
+                  @if (App::getLocale() == 'en')
+                  {{ $whoares -> titulo2 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $steps -> titulo1 }}
+                  @endif
+               </h1>
+               <p>
+                  @if (App::getLocale() == 'en')
+                  {{ $whoares -> descripcion2 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $whoares -> descripcion1 }}
+                  @endif
+               </p>
             </div>
             <div class="col-lg-6 text-center">
                <div class="col-lg-12 text-center m-t-n-lg wow zoomIn">
@@ -332,21 +475,25 @@
                <div class="accordion">
                   <div class="panel-group" id="accordion1">
                      <div class="panel panel-default">
-                        <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" href="#collapseOne1">
-                           <div class="panel-heading actives">
+                        <div class="panel-heading actives">
+                           <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" href="#collapseOne1">
                               <h3 class="panel-title">
                                  Brezza Project, S.A.
                                  <i class="fa fa-angle-right pull-right"></i>
                               </h3>
-                        </a>
+                           </a>
                         </div>
                         <div id="collapseOne1" class="panel-collapse collapse in">
                            <div class="panel-body">
                               <div class="media accordion-inner">
                                  <div class="media-body">
-                                    <p align=justify>Red de investigadores formados en áreas multidisciplinarias que pone
-en marcha el ingenio y la integración innovadora, para cooperar y apalancar la
-transición de nuestras sociedades a modos de vida y de negocios más sustentables.</p>
+                                    <p align=justify>
+                                       @if (App::getLocale() == 'en')
+                                       {{ $whoares -> text1 }}
+                                       @elseif (App::getLocale() == 'es')
+                                       {{ $whoares -> texto1 }}
+                                       @endif
+                                    </p>
                                  </div>
                               </div>
                            </div>
@@ -356,16 +503,20 @@ transición de nuestras sociedades a modos de vida y de negocios más sustentabl
                         <div class="panel-heading">
                            <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
                               <h3 class="panel-title">
-                                 Visión
+                                 {{ trans('app.vision') }}
                                  <i class="fa fa-angle-right pull-right"></i>
                               </h3>
                            </a>
                         </div>
                         <div id="collapseThree1" class="panel-collapse collapse">
                            <div class="panel-body">
-                              <p align=justify>Destacar en la generación de productos y servicios innovadores que
-dinamicen diferentes nichos de mercado, en torno a los nuevos modos de
-participación social, la nueva arquitectura financiera mundial y el desarrollo local.</p>
+                              <p align=justify>D
+                                 @if (App::getLocale() == 'en')
+                                 {{ $whoares -> text2 }}
+                                 @elseif (App::getLocale() == 'es')
+                                 {{ $whoares -> texto2 }}
+                                 @endif
+                              </p>
                            </div>
                         </div>
                      </div>
@@ -373,18 +524,20 @@ participación social, la nueva arquitectura financiera mundial y el desarrollo 
                         <div class="panel-heading">
                            <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
                               <h3 class="panel-title">
-                                 Misión
+                                 {{ trans('app.mission') }}
                                  <i class="fa fa-angle-right pull-right"></i>
                               </h3>
                            </a>
                         </div>
                         <div id="collapseTwo1" class="panel-collapse collapse">
                            <div class="panel-body">
-                              <p align=justify>Facilitar el intercambio de información y la integración entre
-personas, organizaciones y mercados, a través del diseño y puesta en
-funcionamiento de innovaciones tecnológicas que contribuyan a su vez con el
-incremento de la eficiencia, el mejoramiento continuo, la transparencia y la calidad
-de vida en los segmentos y espacios hacia los que enfocamos nuestra cooperación.</p>
+                              <p align=justify>
+                                 @if (App::getLocale() == 'en')
+                                 {{ $whoares -> text3 }}
+                                 @elseif (App::getLocale() == 'es')
+                                 {{ $whoares -> texto3 }}
+                                 @endif
+                              </p>
                            </div>
                         </div>
                      </div>
@@ -392,16 +545,21 @@ de vida en los segmentos y espacios hacia los que enfocamos nuestra cooperación
                         <div class="panel-heading">
                            <a style="text-decoration:none" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
                               <h3 class="panel-title">
-                                 Organización
+                                 {{ trans('app.organization') }}
                                  <i class="fa fa-angle-right pull-right"></i>
                               </h3>
                            </a>
                         </div>
                         <div id="collapseFive1" class="panel-collapse collapse">
                            <div class="panel-body">
-                              <p align=justify>La organización responde a criterios de
-estructura circular, por comité y en red, según la dinámica de sus requerimientos.</p>
-                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" id="btnmodal12" data-target="#myModal2">Organigrama</button>
+                              <p align=justify>
+                                 @if (App::getLocale() == 'en')
+                                 {{ $whoares -> text4 }}
+                                 @elseif (App::getLocale() == 'es')
+                                 {{ $whoares -> texto4 }}
+                                 @endif
+                              </p>
+                              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" id="btnmodal12" data-target="#myModal2">{{ trans('app.organigram') }}</button>
                               <!-- Modal -->
                               <div class="modal fade" id="myModal2" role="dialog">
                                  <div class="modal-dialog">
@@ -409,17 +567,16 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                                     <div class="modal-content">
                                        <div class="modal-header">
                                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                          <h4 class="modal-title">Organigrama</h4>
+                                          <h4 class="modal-title">{{ trans('app.organigram') }}</h4>
                                        </div>
                                        <div class="modal-body">
-                                          <p align=justify>El equipo de Brezza Project, s.a., trabaja en torno a una estructura matricial
-por cuanto todos los departamentos participan en el ciclo de vida de los proyectos y
-productos de la corporación. La organización responde también a criterios de
-estructura circular, por comité y en red, según la dinámica de sus requerimientos.</p>
+                                          <p align=justify>
+                                             {{ trans('app.textorg') }}
+                                          </p>
                                           <img class="img-responsive" alt="Organigrama" title="Organigrama" src="landing/img/Organigrama.png">
                                        </div>
                                        <div class="modal-footer">
-                                          <button type="button" id="closemodal12"  class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                          <button type="button" id="closemodal12"  class="btn btn-primary" data-dismiss="modal">{{ trans('app.close') }}</button>
                                        </div>
                                     </div>
                                  </div>
@@ -432,51 +589,42 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                </div>
             </div>
          </div>
-         <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-               <div class="modal-content">
-                  <div class="modal-header">
-                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                     <h4 class="modal-title">Reseña Historica</h4>
-                     <small class="font-bold">Intégrate y prospera.</small>
-                  </div>
-                  <div class="modal-body">
-                     <figure align="center">
-                        <iframe id="cartoonVideo" width="560" height="315" src="https://www.youtube.com/embed/qfNmyxV2Ncw" frameborder="0" allowfullscreen></iframe> frameborder="0" allowfullscreen></iframe>
-                     </figure>
-                  </div>
-                  <div class="modal-footer">
-                     <button type="button"  class="btn btn-white" data-dismiss="modal">Close</button>
-                     <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         
       </section>
       <section id="rellenob" display="none">
          <div class="row" >
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
       </section>
-      <!--PASOS Car  blanco  -->
+      <!--  X STEPS -->
       <section class="cd-horizontal-timeline" id="Steps">
          <div class="row">
             <div class="col-lg-12 text-center">
                <div class="navy-line"></div>
-               <h1>Participar en nuestros proyectos es muy fácil</h1>
-               <p>Cambia tu vida con nuestros innovadores proyectos en 5 simples pasos</p>
+               <h1>
+                  @if (App::getLocale() == 'en')
+                  {{ $steps -> titulo2 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $steps -> titulo1 }}
+                  @endif
+               </h1>
+               <p>
+                  @if (App::getLocale() == 'en')
+                  {{ $steps -> descripcion2 }}
+                  @elseif (App::getLocale() == 'es')
+                  {{ $steps -> descripcion1 }}
+                  @endif
+               </p>
             </div>
          </div>
          <div class="timeline wow zoomIn">
             <div class="events-wrapper">
                <div class="events col-md-offset-2 col-md-4">
                   <ul style="list-style:none;" >
-                     <li><a href="#0" data-date="28/01/2014" class="selected">Paso 1</a></li>
-                     <li><a href="#0" data-date="28/02/2014">Paso 2</a></li>
-                     <li><a href="#0" data-date="28/03/2014">Paso 3</a></li>
-                     <li><a href="#0" data-date="28/04/2014">Paso 4</a></li>
-                     <li><a href="#0" data-date="28/05/2014">Paso 5</a></li>
+                     <li><a href="#0" data-date="28/01/2014" class="selected">{{ trans('app.step1') }}</a></li>
+                     <li><a href="#0" data-date="28/02/2014">{{ trans('app.step2') }}</a></li>
+                     <li><a href="#0" data-date="28/03/2014">{{ trans('app.step3') }}</a></li>
+                     <li><a href="#0" data-date="28/04/2014">{{ trans('app.step4') }}</a></li>
+                     <li><a href="#0" data-date="28/05/2014">{{ trans('app.step5') }}</a></li>
                   </ul>
                   <span class="filling-line" aria-hidden="true"></span>
                </div>
@@ -503,11 +651,23 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                   <div class="row">
                      <div class="col-md-offset-1 col-md-2">
                         </br></br>
-                        <img src="landing/img/avatar1.jpg" alt="Paso 1" class="pasos-img">
+                        <img src="{{ $steps -> img1 }}" alt="Paso 1" class="pasos-img">
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 1. Escoge</h2>
-                        <em>Selecciona el proyecto de tu interés</em>
+                        <h2>
+                           @if (App::getLocale() == 'en')
+                           {{ $steps -> paso12 }}
+                           @elseif (App::getLocale() == 'es')
+                           {{ $steps -> paso11 }}
+                           @endif
+                        </h2>
+                        <em>
+                        @if (App::getLocale() == 'en')
+                        {{ $steps -> desc12 }}
+                        @elseif (App::getLocale() == 'es')
+                        {{ $steps -> desc11 }}
+                        @endif
+                        </em>
                      </div>
                   </div>
                   </br></br>
@@ -516,11 +676,23 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                   <div class="row">
                      <div class="col-md-offset-1 col-md-2">
                         </br></br>
-                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                        <img src="{{ $steps -> img2 }}" alt="Paso 2" class="pasos-img">
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 2. Regístrate</h2>
-                        <em>Llena el formulario de registro</em>
+                        <h2> 
+                           @if (App::getLocale() == 'en')
+                           {{ $steps -> paso22 }}
+                           @elseif (App::getLocale() == 'es')
+                           {{ $steps -> paso21 }}
+                           @endif
+                        </h2>
+                        <em>
+                        @if (App::getLocale() == 'en')
+                        {{ $steps -> desc22 }}
+                        @elseif (App::getLocale() == 'es')
+                        {{ $steps -> desc21 }}
+                        @endif
+                        </em>
                      </div>
                   </div>
                   </br></br>
@@ -529,11 +701,23 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                   <div class="row">
                      <div class="col-md-offset-1 col-md-2">
                         </br></br>
-                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                        <img src="{{ $steps -> img3 }}" alt="Paso 3" class="pasos-img">
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 3. Evaluación</h2>
-                        <em>Evaluaremos tu solicitud y te contactaremos </em>
+                        <h2> 
+                           @if (App::getLocale() == 'en')
+                           {{ $steps -> paso32 }}
+                           @elseif (App::getLocale() == 'es')
+                           {{ $steps -> paso31 }}
+                           @endif
+                        </h2>
+                        <em>
+                        @if (App::getLocale() == 'en')
+                        {{ $steps -> desc32 }}
+                        @elseif (App::getLocale() == 'es')
+                        {{ $steps -> desc31 }}
+                        @endif
+                        </em>
                      </div>
                   </div>
                   </br></br>
@@ -542,11 +726,23 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                   <div class="row">
                      <div class="col-md-offset-1 col-md-2">
                         </br></br>
-                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                        <img src="{{ $steps -> img4 }}" alt="Paso 4" class="pasos-img">
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 4. Confirmación</h2>
-                        <em>Valida tu información y confirma tu participación </em>
+                        <h2> 
+                           @if (App::getLocale() == 'en')
+                           {{ $steps -> paso42 }}
+                           @elseif (App::getLocale() == 'es')
+                           {{ $steps -> paso41 }}
+                           @endif
+                        </h2>
+                        <em>
+                        @if (App::getLocale() == 'en')
+                        {{ $steps -> desc42 }}
+                        @elseif (App::getLocale() == 'es')
+                        {{ $steps -> desc41 }}
+                        @endif
+                        </em>
                      </div>
                   </div>
                   </br></br>
@@ -555,11 +751,23 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                   <div class="row">
                      <div class="col-md-offset-1 col-md-2">
                         </br></br>
-                        <%= image_tag @step.img1.url, :alt => "Step 2", :class => "pasos-img"%>
+                        <img src="{{ $steps -> img5 }}" alt="Paso 5" class="pasos-img">
                      </div>
                      <div class="col-md-9">
-                        <h2>Paso 5. Certificado</h2>
-                        <em>Recibe tu acreditación y haz el seguimiento correspondiente </em>
+                        <h2>
+                           @if (App::getLocale() == 'en')
+                           {{ $steps -> paso52 }}
+                           @elseif (App::getLocale() == 'es')
+                           {{ $steps -> paso51 }}
+                           @endif
+                        </h2>
+                        <em>
+                        @if (App::getLocale() == 'en')
+                        {{ $steps -> desc52 }}
+                        @elseif (App::getLocale() == 'es')
+                        {{ $steps -> desc51 }}
+                        @endif
+                        </em>
                      </div>
                   </div>
                   </br></br>
@@ -568,35 +776,53 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
          </div>
          <!-- .events-content -->
       </section>
-      <!--CONTACTO Kev-->
+      <!--  X CONTAC-->
       <section id="contact" class="gray-section contact">
          <div class="container">
             <div class="row m-b-lg">
                <div class="col-lg-12 text-center">
                   <div class="navy-line"></div>
-                  <h1>Contáctanos</h1>
-                  <p>Descripcion de la sección</p>
+                  <h1>
+                     @if (App::getLocale() == 'en')
+                     {{ $contacts -> titulo2 }}
+                     @elseif (App::getLocale() == 'es')
+                     {{ $contacts -> titulo1 }}
+                     @endif
+                  </h1>
+                  <p>
+                     @if (App::getLocale() == 'en')
+                     {{ $contacts -> descripcion2 }}
+                     @elseif (App::getLocale() == 'es')
+                     {{ $contacts -> descripcion1 }}
+                     @endif 
+                  </p>
                </div>
             </div>
             <div class="row m-b-lg">
                <div class="col-lg-3 col-lg-offset-2">
                   <br><br>
                   <address align="center">
-                     <strong><span class="navy">Brezza Project, S.A.</span></strong><br/>
-                     “Barquisimeto, Lara, Venezuela”<br/>
-                     <abbr title="Phone">Teléfono:</abbr> +58 (251) 2317335
+                     <strong><span class="navy">{{ $contacts -> nombreCompania }}</span></strong><br/>
+                     @if (App::getLocale() == 'en')
+                     {{ $contacts -> direccion2 }}
+                     @elseif (App::getLocale() == 'es')
+                     {{ $contacts -> direccion1 }}
+                     @endif <br/>
+                     <abbr title="Phone">
+                     {{ trans('app.phone') }}:
+                     </abbr> +58 (0251) {{ $contacts -> telefono }}
                   </address>
                   <br><br>
                   <div class="col-lg-12 text-center">
                      <p class="m-t-sm">
-                        Síguenos en nuestras redes sociales
+                        {{ trans('app.follow') }}
                      </p>
                      <ul class="list-inline social-icon">
-                        <li><a target="_blank" href="https://twitter.com/brezzaproject" title="Visitanos en Twitter"><i class="fa fa-twitter"></i></a>
+                        <li><a target="_blank" href="{{ $contacts -> twitter}}" title="Visitanos en Twitter"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a target="_blank" href="https://es-la.facebook.com/brezzaproject/" title="Visitanos en Facebook" ><i class="fa fa-facebook"></i></a>
+                        <li><a target="_blank" href="{{ $contacts -> facebook}}" title="Visitanos en Facebook" ><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a target="_blank" href="https://www.instagram.com/brezzaproject/" title="Siguenos en Instagram"><i class="fa fa-instagram"></i></a>
+                        <li><a target="_blank" href="{{ $contacts -> instagram}}" title="Siguenos en Instagram"><i class="fa fa-instagram"></i></a>
                         </li>
                      </ul>
                   </div>
@@ -604,23 +830,24 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
                <div class="col-lg-5">
                   <div>
                      <div class="form-group">
-                        <label class="control-label">Nombre</label>
+                        <label class="control-label">{{ trans('app.name') }}</label>
                         <input type="text" class="form-control" id="nombre" placeholder="John Doe">
                      </div>
                      <div class="form-group">
-                        <label class="control-label">Correo</label>
+                        <label class="control-label">{{ trans('app.email') }}</label>
                         <input type="text" class="form-control" id="email" placeholder="correo@ejemplo.com">
                      </div>
                      <div class="form-group">
-                        <label class="control-label">Mensaje</label>
+                        <label class="control-label">{{ trans('app.message') }}</label>
                         <textarea class="form-control" rows="5" cols="50" style="resize:vertical;" id="comment" placeholder="Escriba su mensaje..."></textarea>
                      </div>
-                     <button class="btn btn-primary" type="submit">Enviar</button>
+                     <button class="btn btn-primary" type="submit">{{ trans('app.send') }}</button>
                   </div>
                </div>
             </div>
          </div>
       </section>
+      <!--  X FOOTER-->
       <div class="row gray-section">
          <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
             @include('landing.layouts.foot')
@@ -635,28 +862,395 @@ estructura circular, por comité y en red, según la dinámica de sus requerimie
       <script src="landing/js/inspinia.js"></script>
       <script src="landing/js/custom.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
-   
-         <script type="text/javascript" >
-            $(document).ready(function() {  
-               $("#rellenob").hide(); 
-                $('button#btnmodal12').click(function() {
-                    $('#thenav').css('z-index', '0px');
-                    $('.navbar').css('z-index', '0px');
-                     $("nav.navbar-default").hide();
-                     
-                     $("#rellenob").show();
-                });
-                $('#myModal2').on('hidden.bs.modal', function () {
-                       $("nav.navbar-default").show();
-                       $("#rellenob").hide();  
-                  })
-                $('#closemodal12').click(function() {
-                     
-                });
-                     
-            });
-         </script>
+      <script type="text/javascript" >
+         $(document).ready(function() {  
+            $("#rellenob").hide(); 
+             $('button#btnmodal12').click(function() {
+                 $('#thenav').css('z-index', '0px');
+                 $('.navbar').css('z-index', '0px');
+                  $("nav.navbar-default").hide();
+                  
+                  $("#rellenob").show();
+             });
+             $('#myModal2').on('hidden.bs.modal', function () {
+                    $("nav.navbar-default").show();
+                    $("#rellenob").hide();  
+               })
+             $('#closemodal12').click(function() {
+                  
+             });
+                  
+         });
+      </script>
+      <script type="text/javascript">
+         // Config box
          
+         // Enable/disable fixed top navbar
+         $('#fixednavbar').click(function (){
+             if ($('#fixednavbar').is(':checked')){
+                 $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
+                 $("body").removeClass('boxed-layout');
+                 $("body").addClass('fixed-nav');
+                 $('#boxedlayout').prop('checked', false);
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("boxedlayout",'off');
+                 }
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar",'on');
+                 }
+             } else{
+                 $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+                 $("body").removeClass('fixed-nav');
+                 $("body").removeClass('fixed-nav-basic');
+                 $('#fixednavbar2').prop('checked', false);
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar",'off');
+                 }
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar2",'off');
+                 }
+             }
+         });
+         
+         // Enable/disable fixed top navbar
+         $('#fixednavbar2').click(function (){
+             if ($('#fixednavbar2').is(':checked')){
+                 $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
+                 $("body").removeClass('boxed-layout');
+                 $("body").addClass('fixed-nav').addClass('fixed-nav-basic');
+                 $('#boxedlayout').prop('checked', false);
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("boxedlayout",'off');
+                 }
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar2",'on');
+                 }
+             } else {
+                 $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+                 $("body").removeClass('fixed-nav').removeClass('fixed-nav-basic');
+                 $('#fixednavbar').prop('checked', false);
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar2",'off');
+                 }
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar",'off');
+                 }
+             }
+         });
+         
+         // Enable/disable fixed sidebar
+         $('#fixedsidebar').click(function (){
+             if ($('#fixedsidebar').is(':checked')){
+                 $("body").addClass('fixed-sidebar');
+                 $('.sidebar-collapse').slimScroll({
+                     height: '100%',
+                     railOpacity: 0.9
+                 });
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixedsidebar",'on');
+                 }
+             } else{
+                 $('.sidebar-collapse').slimscroll({destroy: true});
+                 $('.sidebar-collapse').attr('style', '');
+                 $("body").removeClass('fixed-sidebar');
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixedsidebar",'off');
+                 }
+             }
+         });
+         
+         // Enable/disable collapse menu
+         $('#collapsemenu').click(function (){
+             if ($('#collapsemenu').is(':checked')){
+                 $("body").addClass('mini-navbar');
+                 SmoothlyMenu();
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("collapse_menu",'on');
+                 }
+         
+             } else{
+                 $("body").removeClass('mini-navbar');
+                 SmoothlyMenu();
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("collapse_menu",'off');
+                 }
+             }
+         });
+         
+         // Enable/disable boxed layout
+         $('#boxedlayout').click(function (){
+             if ($('#boxedlayout').is(':checked')){
+                 $("body").addClass('boxed-layout');
+                 $('#fixednavbar').prop('checked', false);
+                 $('#fixednavbar2').prop('checked', false);
+                 $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+                 $("body").removeClass('fixed-nav');
+                 $("body").removeClass('fixed-nav-basic');
+                 $(".footer").removeClass('fixed');
+                 $('#fixedfooter').prop('checked', false);
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar",'off');
+                 }
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixednavbar2",'off');
+                 }
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixedfooter",'off');
+                 }
+         
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("boxedlayout",'on');
+                 }
+             } else{
+                 $("body").removeClass('boxed-layout');
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("boxedlayout",'off');
+                 }
+             }
+         });
+         
+         // Enable/disable fixed footer
+         $('#fixedfooter').click(function (){
+             if ($('#fixedfooter').is(':checked')){
+                 $('#boxedlayout').prop('checked', false);
+                 $("body").removeClass('boxed-layout');
+                 $(".footer").addClass('fixed');
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("boxedlayout",'off');
+                 }
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixedfooter",'on');
+                 }
+             } else{
+                 $(".footer").removeClass('fixed');
+         
+                 if (localStorageSupport){
+                     localStorage.setItem("fixedfooter",'off');
+                 }
+             }
+         });
+         
+         // SKIN Select
+         $('.spin-icon').click(function (){
+             $(".theme-config-box").toggleClass("show");
+         });
+         
+         // Default skin
+         $('.s-skin-0').click(function (){
+             $("body").removeClass("skin-1");
+             $("body").removeClass("skin-2");
+             $("body").removeClass("skin-3");
+         });
+         
+         // Blue skin
+         $('.s-skin-1').click(function (){
+             $("body").removeClass("skin-2");
+             $("body").removeClass("skin-3");
+             $("body").addClass("skin-1");
+         });
+         
+         // Inspinia ultra skin
+         $('.s-skin-2').click(function (){
+             $("body").removeClass("skin-1");
+             $("body").removeClass("skin-3");
+             $("body").addClass("skin-2");
+         });
+         
+         // Yellow skin
+         $('.s-skin-3').click(function (){
+             $("body").removeClass("skin-1");
+             $("body").removeClass("skin-2");
+             $("body").addClass("skin-3");
+         });
+         
+         if (localStorageSupport){
+             var collapse = localStorage.getItem("collapse_menu");
+             var fixedsidebar = localStorage.getItem("fixedsidebar");
+             var fixednavbar = localStorage.getItem("fixednavbar");
+             var fixednavbar2 = localStorage.getItem("fixednavbar2");
+             var boxedlayout = localStorage.getItem("boxedlayout");
+             var fixedfooter = localStorage.getItem("fixedfooter");
+         
+             if (collapse == 'on'){
+                 $('#collapsemenu').prop('checked','checked')
+             }
+             if (fixedsidebar == 'on'){
+                 $('#fixedsidebar').prop('checked','checked')
+             }
+             if (fixednavbar == 'on'){
+                 $('#fixednavbar').prop('checked','checked')
+             }
+             if (fixednavbar2 == 'on'){
+                 $('#fixednavbar2').prop('checked','checked')
+             }
+             if (boxedlayout == 'on'){
+                 $('#boxedlayout').prop('checked','checked')
+             }
+             if (fixedfooter == 'on') {
+                 $('#fixedfooter').prop('checked','checked')
+             }
+         }
+         
+      </script>
+      <?php $lostags = '';?>
+      @if (App::getLocale() == 'en')
+      @foreach($tags as $tag)
+      <?php 
+         if ($tag!=$tags->last()){
+            $lostags = $lostags.'.'.$tag->name2.',';
+         }
+         else{
+            $lostags = $lostags.'.'.$tag->name2;
+         }
+         ?>
+      @endforeach             
+      @elseif (App::getLocale() == 'es')
+      @foreach($tags as $tag)
+      <?php 
+         if ($tag!=$tags->last()){
+            $lostags = $lostags.'.'.$tag->name.',';
+         }
+         else{
+            $lostags = $lostags.'.'.$tag->name;
+         }
+         ?>
+      @endforeach              
+      @endif
+      <script type="text/javascript">
+         /*///////////////////////////////// 
+         PORTFOLIO
+         ////////////////////////////////*/
+         
+         
+         $(function () {
+              
+          var filterList = {
+          
+              init: function () {
+              
+                  // MixItUp plugin
+                  // http://mixitup.io
+                  $('#portfoliolist2').mixItUp({
+                      selectors: {
+                    target: '.portfolio',
+                    filter: '.filter' 
+                },
+                load: {
+                    filter: '.tag1,.tag2,.tag3,.tag4,.tag5,<?= $lostags ?>' // show app tab on first load
+                  }     
+                  });                             
+              }
+          };
+          // Run the show!
+          filterList.init();
+          
+         }); 
+         
+         
+         $(function(){ // on first doc ready we instantiate mixitup
+          $('#portfoliolist2').mixItUp(); // an instance now exists in the session memory
+         });
+         $(window).on('page:before-change', function(){ 
+          $('#portfoliolist2').mixItUp('destroy'); // destroy the instance
+         });
+         $(window).on('page:load', function(){
+          $('#portfoliolist2').mixItUp(); // We can now reinstantiate without being blocked
+         });
+         
+                  
+      </script>
+      <!--SLIDER DE MEDIOS - SCRIPT -->
+      <script type="text/javascript" >
+         $(document).ready(function () {
+         //rotation speed and timer
+         var speed = 11000;
+         
+         var run = setInterval(rotate, speed);
+         var slides = $('.slide');
+         var container = $('#slides ul');
+         var elm = container.find(':first-child').prop("tagName");
+         var item_width = container.width();
+         var previous = 'prev'; //id of previous button
+         var next = 'next'; //id of next button
+         slides.width(item_width); //set the slides to the correct pixel width
+         container.parent().width(item_width);
+         container.width(slides.length * item_width); //set the slides container to the correct total width
+         container.find(elm + ':first').before(container.find(elm + ':last'));
+         resetSlides();
+         
+         
+         //if user clicked on prev button
+         
+         $('#buttons a').click(function (e) {
+           //slide the item
+           
+           if (container.is(':animated')) {
+               return false;
+           }
+           if (e.target.id == previous) {
+               container.stop().animate({
+                   'left': 0
+               }, 1500, function () {
+                   container.find(elm + ':first').before(container.find(elm + ':last'));
+                   resetSlides();
+               });
+           }
+           
+           if (e.target.id == next) {
+               container.stop().animate({
+                   'left': item_width * -2
+               }, 1500, function () {
+                   container.find(elm + ':last').after(container.find(elm + ':first'));
+                   resetSlides();
+               });
+           }
+           
+           //cancel the link behavior            
+           return false;
+           
+         });
+         
+         //if mouse hover, pause the auto rotation, otherwise rotate it    
+         container.parent().mouseenter(function () {
+           clearInterval(run);
+         }).mouseleave(function () {
+           run = setInterval(rotate, speed);
+         });
+         
+         
+         function resetSlides() {
+           //and adjust the container so current is in the frame
+           container.css({
+               'left': -1 * item_width
+           });
+         }
+         
+         });
+         //a simple function to click next link
+         //a timer will call this function, and the rotation will begin
+         
+         function rotate() {
+         $('#next').click();
+         }
+         
+      </script>
    </body>
-   
 </html>

@@ -342,38 +342,7 @@
    }
    });
    
-   
-   /*///////////////////////////////// 
-   PORTFOLIO
-   ////////////////////////////////*/
-   
-   
-$(function () {
-        
-    var filterList = {
-    
-        init: function () {
-        
-            // MixItUp plugin
-            // http://mixitup.io
-            $('#portfoliolist').mixItUp({
-                selectors: {
-              target: '.portfolio',
-              filter: '.filter' 
-          },
-          load: {
-              filter: '.tag1,.tag2,.tag3,.tag4,.tag5' // show app tab on first load
-            }     
-            });                             
-        
-        }
-
-    };
-    
-    // Run the show!
-    filterList.init();
-    
-}); 
+  
 
 $(function(){ // on first doc ready we instantiate mixitup
     $('#portfoliolist').mixItUp(); // an instance now exists in the session memory

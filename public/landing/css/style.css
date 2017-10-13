@@ -116,7 +116,7 @@ h1 {
     color: #fff;
   }
   .navbar-default .navbar-brand {
-    color: #fff;
+    color: #00257B;
     height: auto;
     display: block;
     font-size: 14px;
@@ -160,6 +160,7 @@ h1 {
 
   .navbar-fixed-top {
     border: none !important;
+    border-radius: 0 !important;
   }
 
   .navbar-fixed-top.navbar-scroll {

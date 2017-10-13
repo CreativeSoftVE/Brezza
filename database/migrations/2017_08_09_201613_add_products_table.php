@@ -17,10 +17,9 @@ class AddProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            $table->integer('user_id')->unsigned();
+            $table->string('name2');
+            $table->text('description2');
             $table->integer('category_id')->unsigned();
-            
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             
             $table->timestamps();

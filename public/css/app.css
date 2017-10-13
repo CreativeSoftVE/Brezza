@@ -7817,7 +7817,7 @@ body.landing-page {
 }
 
 .landing-page .navbar-default .nav li a {
-  color: #fff;
+  color: #00257B;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -7833,13 +7833,13 @@ body.landing-page {
 .landing-page .navbar-default .navbar-nav > .active > a,
 .landing-page .navbar-default .navbar-nav > .active > a:hover {
   background: transparent;
-  color: #fff;
+  color:#00257B;
   border-top: 6px solid #00257b;
 }
 
 .landing-page .navbar-default .navbar-nav > li > a:hover,
 .landing-page .navbar-default .navbar-nav > li > a:focus {
-  color: #00257b;
+  color: blue;
   background: inherit;
 }
 
@@ -7860,7 +7860,7 @@ body.landing-page {
 
 .landing-page .navbar-default .navbar-brand:hover,
 .landing-page .navbar-default .navbar-brand:focus {
-  background: #179d82;
+  background: white;
   color: #fff;
 }
 
@@ -7869,7 +7869,7 @@ body.landing-page {
   height: auto;
   display: block;
   font-size: 14px;
-  background: #00257b;
+  background: transparent;
   padding: 15px 20px 15px 20px;
   border-radius: 0 0 5px 5px;
   font-weight: 700;
@@ -7878,7 +7878,7 @@ body.landing-page {
 }
 
 .landing-page .navbar-scroll.navbar-default .nav li a {
-  color: #676a6c;
+  color: #00257B;
 }
 
 .landing-page .navbar-scroll.navbar-default .nav li a:hover {

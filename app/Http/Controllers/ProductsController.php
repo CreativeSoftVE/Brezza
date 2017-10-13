@@ -37,7 +37,7 @@ class ProductsController extends Controller
         }
         
         $product = new Product($request->all());
-        $product->user_id = 1;
+        
         $product->save();
         
         $product->tags()->sync($request->tags);
@@ -86,5 +86,25 @@ class ProductsController extends Controller
         $product->delete();
         Flash::error('El producto ' . $product->name . ' ha sido eliminado exitosamente.');
         return redirect()->route('products.index');
+    }
+    
+    
+    public function listByCategory($id){
+        $category = Category::find($id);
+        //$products = Product::where('category_id',$id)->orderBy('id','DESC')->paginate(7);
+        $products = $category->products;
+        return view('landing.categories')->with('products',$products)->with('category', $category);
+    }
+    
+    public function listByTag($id){
+        $category = Tag::find($id);
+        $products = $category->products;
+        //$products = Product::where('category_id',$id)->orderBy('id','DESC')->paginate(7);
+        return view('landing.categories')->with('products',$products)->with('category', $category);
+    }
+    
+    public function frontView($id){
+        $product = Product::find($id);
+        return view('landing.product')->with('product', $product);
     }
 }
