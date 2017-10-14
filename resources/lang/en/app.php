@@ -10,6 +10,7 @@ return [
     'login'          => 'Login',
     'forgot'         => 'Forgot password?',
     'textl1'         => 'Do not have an account?. Then contact us',
+    'register'       => 'Register',
     
     /*Menu*/
      'home'        => 'Home',
@@ -19,6 +20,20 @@ return [
      'login'       => 'Sign in',
      'lang'        => 'Language',
     
+    /*Slider*/
+    
+    /*Benefits*/
+    
+    /*Products*/
+    'titlepro'          => 'More than 10 products',
+    'titlepro2'         => 'that will change the world',
+    'descriptionpro'    => 'Brezza Project, integrate and thrive',
+    
+    /*Portfolio*/
+    'titleport'          => 'PORTFOLIO',
+    'descriptionport'    => 'Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.',
+    'descriptionport2'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.',
+
     /*Medios*/
      'medios'       => 'What the media say',
     
@@ -43,6 +58,9 @@ return [
      'message'     => 'Message',
      'follow'      => 'Follow us on social media',
      'send'        => 'Send',
+     'textname'    => 'John Doe',
+     'textemail'   => 'email@example.com',
+     'textcontent' => 'Write your message...',
      
     /*Footer*/
      'politics'    => 'Privacy policies',

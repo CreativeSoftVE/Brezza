@@ -71,7 +71,7 @@
 }
 
 .setings-item a {
-  color: #fff;
+  color: #00257b;
 }
 
 .default-skin, .blue-skin, .ultra-skin, .yellow-skin {

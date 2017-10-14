@@ -20,10 +20,10 @@ class ContactsTableSeeder extends Seeder
             'nombreCompania'    => 'Brezza Project, S.A.',
             'direccion1'    => 'Barquisimeto, Lara, Venezuela',
             'direccion2'    => 'Barquisimeto, Lara, Venezuela',
-            'telefono'    => '1234567',
-            'facebook'    => 'https://www.facebook.com/brezzaproject/',
-            'twitter'    => 'https://www.twitter.com',
-            'instagram'    => 'https://www.instagram.com',
+            'telefono1'    => '1234567',
+            'facebook1'    => 'https://www.facebook.com/brezzaproject/',
+            'twitter1'    => 'https://www.twitter.com',
+            'instagram1'    => 'https://www.instagram.com',
         ]);
     }
 }

@@ -10,6 +10,7 @@ return [
     'login'          => 'Ingresar',
     'forgot'         => '¿Olvidó su contraseña?',
     'textl1'         => '¿No tiene una cuenta?. Póngase en contacto con nosotros',
+    'register'       => 'Registrar',
     
     /*Menu*/
     'home'        => 'Inicio',
@@ -19,6 +20,20 @@ return [
     'login'       => 'Iniciar sesión',
     'lang'       => 'Idiomas',
      
+    /*Slider*/
+    
+    /*Benefits*/
+     
+    /*Products*/
+    'titlepro'          => 'Más de 10 productos',
+    'titlepro2'         => 'que cambiarán el mundo',
+    'descriptionpro'    => 'Brezza Project, intégrate y prospera',
+    
+    /*Portafolio*/
+    'titleport'          => 'PORTFOLIO',
+    'descriptionport'    => 'Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.',
+    'descriptionport2'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.',
+    
     /*Medios*/
      'medios'       => 'Lo que dicen los medios',
      
@@ -43,6 +58,9 @@ return [
      'message'     => 'Mensaje',
      'follow'      => 'Síguenos en nuestras redes sociales',
      'send'        => 'Enviar',
+     'textname'    => 'Juan Rodriguez',
+     'textemail'   => 'correo@ejemplo.com',
+     'textcontent' => 'Escriba su mensaje...',
      
     /*Footer*/
      'politics'    => 'Polìticas de privacidad',

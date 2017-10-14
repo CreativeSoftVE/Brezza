@@ -131,7 +131,7 @@
          <span class="sr-only">Next</span>
          </a>
       </div>
-      <!--  X BENEFICIOS Car-->
+      <!--  X BENEFICIOS-->
       <section id="beneficios" class="services gray-section">
          <div class="row benefits">
             <div class="col-sm-3">
@@ -146,7 +146,7 @@
                   @if (App::getLocale() == 'en')
                   {{ $benefits -> descripcion12 }}
                   @elseif (App::getLocale() == 'es')
-                  {{ $contacts -> descripcion1 }}
+                  {{ $benefits -> descripcion1 }}
                   @endif
                </p>
             </div>
@@ -162,7 +162,7 @@
                   @if (App::getLocale() == 'en')
                   {{ $benefits -> descripcion22 }}
                   @elseif (App::getLocale() == 'es')
-                  {{ $contacts -> descripcion2 }}
+                  {{ $benefits -> descripcion2 }}
                   @endif
                </p>
             </div>
@@ -178,7 +178,7 @@
                   @if (App::getLocale() == 'en')
                   {{ $benefits -> descripcion32 }}
                   @elseif (App::getLocale() == 'es')
-                  {{ $contacts -> descripcion3 }}
+                  {{ $benefits -> descripcion3 }}
                   @endif         
                </p>
             </div>
@@ -194,19 +194,19 @@
                   @if (App::getLocale() == 'en')
                   {{ $benefits -> descripcion42 }}
                   @elseif (App::getLocale() == 'es')
-                  {{ $contacts -> descripcion4 }}
+                  {{ $benefits -> descripcion4 }}
                   @endif
                </p>
             </div>
          </div>
       </section>
-      <!--PRODUCTOS Kev-->
+      <!--  X PRODUCTOS-->
       <section  id="productos" class="container features">
          <div class="row">
             <div class="col-lg-12 text-center">
                <div class="navy-line"></div>
-               <h1>Más de 10 productos <br/> <span class="navy"> que cambiarán el mundo</span> </h1>
-               <p>Brezza Project, intégrate y prospera</p>
+               <h1>{{ trans('app.titlepro') }} <br/> <span class="navy"> {{ trans('app.titlepro2') }}</span> </h1>
+               <p>{{ trans('app.descriptionpro') }}</p>
             </div>
          </div>
          <div class="row">
@@ -259,14 +259,14 @@
             </div>
          </div>
       </section>
-      <!--  X PORTAFOLIO Kev-->
+      <!--  X PORTAFOLIO-->
       <section id="portafolio" class="gray-section team ">
          <div class="container">
             <div class="row m-b-lg">
                <div class="col-lg-12 text-center">
                   <div class="navy-line"></div>
-                  <h1>PORTAFOLIO</h1>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                  <h1>{{ trans('app.titleport') }}</h1>
+                  <p>{{ trans('app.descriptionport') }}</p>
                </div>
             </div>
             <div class="row wow slideInRight" style="margin-bottom: 40px;">
@@ -378,12 +378,12 @@
             </div>
             <div class="row">
                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                  <p>{{ trans('app.descriptionport2') }}</p>
                </div>
             </div>
          </div>
       </section>
-      <!--MEDIOS Car-->
+      <!--MEDIOS-->
       <section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
          <div class="container">
             <div class="row">
@@ -395,15 +395,6 @@
                   <br>
                   <div id="slides">
                      <ul>
-                        <li class="slide">
-                           <div class="quoteContainer">
-                              <p class="quote-phrase"><span class="quote-marks">"</span> I was literally BLOWN AWAY by Company A's work! They went above and beyond all of our expectations with design, usability. and branding, I will reccommend them to everyone I know!<class="quote-marks">"</span>
-                              </p>
-                           </div>
-                           <div class="authorContainer">
-                              <p class="quote-author">John Doe // Local Business Owner</p>
-                           </div>
-                        </li>
                         <li class="slide">
                            <div class="quoteContainer">
                               <p class="quote-phrase"><span class="quote-marks">"</span>
@@ -435,14 +426,14 @@
                </div>
                <div class="btn-bar">
                   <div id="buttons">
-                     <a id="prev" href="#" class="fa fa-chevron-left"></a>
-                     <a id="next" href="#" class="fa fa-chevron-right"></a> 
+                     <a id="prev" href="#">.</a>
+                     <a id="next" href="#">.</a> 
                   </div>
                </div>
             </div>
          </div>
       </section>
-      <!--WHOARE Car-->
+      <!-- X WHOARE-->
       <section id="team" class="features">
          <div class="container">
             <div class="col-lg-12 text-center">
@@ -810,7 +801,7 @@
                      @endif <br/>
                      <abbr title="Phone">
                      {{ trans('app.phone') }}:
-                     </abbr> +58 (0251) {{ $contacts -> telefono }}
+                     </abbr> +58 (0251) {{ $contacts -> telefono1 }}
                   </address>
                   <br><br>
                   <div class="col-lg-12 text-center">
@@ -818,11 +809,11 @@
                         {{ trans('app.follow') }}
                      </p>
                      <ul class="list-inline social-icon">
-                        <li><a target="_blank" href="{{ $contacts -> twitter}}" title="Visitanos en Twitter"><i class="fa fa-twitter"></i></a>
+                        <li><a target="_blank" href="{{ $contacts -> twitter1}}" title="Visitanos en Twitter"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a target="_blank" href="{{ $contacts -> facebook}}" title="Visitanos en Facebook" ><i class="fa fa-facebook"></i></a>
+                        <li><a target="_blank" href="{{ $contacts -> facebook1}}" title="Visitanos en Facebook" ><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a target="_blank" href="{{ $contacts -> instagram}}" title="Siguenos en Instagram"><i class="fa fa-instagram"></i></a>
+                        <li><a target="_blank" href="{{ $contacts -> instagram1}}" title="Siguenos en Instagram"><i class="fa fa-instagram"></i></a>
                         </li>
                      </ul>
                   </div>
@@ -831,15 +822,15 @@
                   <div>
                      <div class="form-group">
                         <label class="control-label">{{ trans('app.name') }}</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="John Doe">
+                        <input type="text" class="form-control" id="nombre" placeholder="{{ trans('app.textname') }}">
                      </div>
                      <div class="form-group">
                         <label class="control-label">{{ trans('app.email') }}</label>
-                        <input type="text" class="form-control" id="email" placeholder="correo@ejemplo.com">
+                        <input type="text" class="form-control" id="email" placeholder="{{ trans('app.textemail') }}">
                      </div>
                      <div class="form-group">
                         <label class="control-label">{{ trans('app.message') }}</label>
-                        <textarea class="form-control" rows="5" cols="50" style="resize:vertical;" id="comment" placeholder="Escriba su mensaje..."></textarea>
+                        <textarea class="form-control" rows="5" cols="50" style="resize:vertical;" id="comment" placeholder="{{ trans('app.textcontent') }}"></textarea>
                      </div>
                      <button class="btn btn-primary" type="submit">{{ trans('app.send') }}</button>
                   </div>
@@ -1181,7 +1172,7 @@
       <script type="text/javascript" >
          $(document).ready(function () {
          //rotation speed and timer
-         var speed = 11000;
+         var speed = 9000;
          
          var run = setInterval(rotate, speed);
          var slides = $('.slide');

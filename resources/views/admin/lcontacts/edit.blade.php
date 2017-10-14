@@ -83,25 +83,25 @@
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-2 col-form-label">Télefono de contácto <i class="fa fa-phone-square" aria-hidden="true"></i></label>
                                     <div class="col-lg-12">
-                                       {!! Form::text('telefono',$contact->telefono,['class'=>'form-control', 'require']) !!}
+                                       {!! Form::text('telefono1',$contact->telefono1,['class'=>'form-control', 'require']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-2 col-form-label"><br>Cuenta de facebook <i class="fa fa-twitter-square" aria-hidden="true"></i></label>
                                     <div class="col-lg-12">
-                                       {!! Form::text('facebook',$contact->facebook,['class'=>'form-control', 'require']) !!}
+                                       {!! Form::text('facebook1',$contact->facebook1,['class'=>'form-control', 'require']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-2 col-form-label"><br>Cuenta de twitter <i class="fa fa-twitter-square" aria-hidden="true"></i></label>
                                     <div class="col-lg-12">
-                                       {!! Form::text('twitter',$contact->twitter,['class'=>'form-control', 'require']) !!}
+                                       {!! Form::text('twitter1',$contact->twitter1,['class'=>'form-control', 'require']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-2 col-form-label"><br>Cuenta de instagram <i class="fa fa-instagram" aria-hidden="true"></i></label>
                                     <div class="col-lg-12">
-                                       {!! Form::text('instagram',$contact->instagram,['class'=>'form-control', 'require']) !!}
+                                       {!! Form::text('instagram1',$contact->instagram1,['class'=>'form-control', 'require']) !!}
                                     </div>
                                 </div>
                                 

@@ -88,6 +88,11 @@
             'uses' => 'ContactsController@destroy',
             'as' => 'admin.contacts.destroy']);
         
+        Route::resource('steps', 'StepsController');
+        Route::get('steps/{id}/destroy', [
+            'uses' => 'StepsController@destroy',
+            'as' => 'admin.steps.destroy']);
+        
         Route::resource('benefits', 'BenefitsController');
         Route::get('benefits/{id}/destroy', [
             'uses' => 'BenefitsController@destroy',

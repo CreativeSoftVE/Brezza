@@ -53,13 +53,13 @@
                <div class="row"><div class="col-lg-6 col-lg-offset-4">
                   <br/><h3 style="color:#00257B">OTROS DATOS: </h3>
                   <label for="example-text-input" class="col-2 col-form-label"> <i class="fa fa-phone-square" style="color:#00257B" aria-hidden="true"></i> Teléfono:  </label>
-                  <label for="example-text-input" class="col-2 col-form-label">+58 (0251) {{ $contacts -> telefono}} </label><br>
+                  <label for="example-text-input" class="col-2 col-form-label">+58 (0251) {{ $contacts -> telefono1}} </label><br>
                   <label for="example-text-input" class="col-2 col-form-label"> <i class="fa fa-facebook-square" style="color:#00257B" aria-hidden="true"></i> Enlace cuenta de facebook:  </label>
-                  <label for="example-text-input" class="col-2 col-form-label">{{ $contacts -> facebook}} </label><br>
+                  <label for="example-text-input" class="col-2 col-form-label">{{ $contacts -> facebook1}} </label><br>
                   <label for="example-text-input" class="col-2 col-form-label"> <i class="fa fa-twitter-square" style="color:#00257B" aria-hidden="true"></i> Enlace cuenta de twitter:  </label>
-                  <label for="example-text-input" class="col-2 col-form-label">{{ $contacts -> twitter}} </label><br>
+                  <label for="example-text-input" class="col-2 col-form-label">{{ $contacts -> twitter1}} </label><br>
                   <label for="example-text-input" class="col-2 col-form-label"> <i class="fa fa-instagram" style="color:#00257B" aria-hidden="true"></i> Enlace cuenta de instagram:  </label>
-                  <label for="example-text-input" class="col-2 col-form-label">{{ $contacts -> instagram}} </label><br>
+                  <label for="example-text-input" class="col-2 col-form-label">{{ $contacts -> instagram1}} </label><br>
                </div></div><br><br>
             </div>
          </div>

@@ -58,8 +58,10 @@
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
-                <a href="{{ route('password.request') }}"><small>{{trans('app.forgot')}}</small></a>
+                <a href="{{ route('password.request') }}"><small>{{trans('app.forgot')}}</small></a><br>
+                <a href="{{ route('register') }}"><small>{{trans('app.register')}}</small></a>
                 <p class="text-muted text-center"><small>{{trans('app.textl1')}}</small></p>
+                
     
             </form>
             <p class="m-t"> <small>© 2016-2017 Brezza Project S.A.</small> </p>

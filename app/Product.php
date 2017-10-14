@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Laravelista\Comments\Comments\Traits\Comments;
 
 class Product extends Model
 {
     use Sluggable;
+    use Comments;
     protected $table = "products";
     protected $fillable = ['name','description','category_id', 'name2', 'description2', 'detail', 'detail2'];
     

@@ -257,7 +257,11 @@
          <div class="navy-line"></div>
          <br>
          <div class"row">
-            <div class"col-lg-12">
+            <div class"col-lg-8 col-lg-offset-2">
+               @include('comments::comments-react', [
+                   'content_type' => App\Product::class,
+                   'content_id' => $product->id
+               ])
                <div class="fb-comments col-md-10 col-md-offset-1" data-width="100%" data-href="https://brezzaproject-cecheverria1.c9users.io" data-numposts="5"></div>
             </div>
          </div>
@@ -265,6 +269,9 @@
    </div>
 </div>
 <div class="ibox-footer">
+   
+   
+   
    <div id="fb-root"></div>
    <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];

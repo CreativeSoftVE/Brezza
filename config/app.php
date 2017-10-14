@@ -188,6 +188,8 @@ return [
         Jorenvh\Share\Providers\ShareServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        
+    Laravelista\Comments\Providers\CommentsServiceProvider::class,
 
     ],
 

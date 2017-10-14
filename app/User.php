@@ -28,4 +28,9 @@ class User extends Authenticatable
     public function products(){
         return $this-> hasMany('App\Product');
     }
+    
+    public function comments()
+    {
+        return $this->hasMany(\Laravelista\Comments\Comments\Comment::class);
+    }
 }
