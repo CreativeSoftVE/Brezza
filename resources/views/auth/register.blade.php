@@ -73,9 +73,7 @@
         </div>
     </div>
 </div>
-<script>
-            $("#wizard").steps();
-        </script>
+<?php  $countries = DB::table("countries")->pluck("name","id")->all(); ?>
         <div id="wizard">
              <h1>First Step</h1>
     <div>First Content</div>
@@ -99,32 +97,34 @@
                 <form id="form" action="#" class="wizard-big">
                     <h1>Presentate</h1>
                     <fieldset>
-                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :class =>"m-t", multipart: true})  do |f| %>
-                        <%= devise_error_messages! %>
+                         {!! Form::open(['route' => 'users.store' , 'method' => 'POST']) !!}
+                        <form class="m-t" method="POST" action="{{ route('register') }}">
                         <h2>Datos personales</h2>
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     <label>Nombre </label>
-                                    <%= f.text_field :firstname,autofocus: true, class: "form-control" %>
-                                    
+                                    {!! Form::text('name',null,['class'=>'form-control', 'require']) !!}
                                 </div>
                                 <div class="form-group">
                                     <label>Apellido </label>
                                     <%= f.text_field :lastname, class: "form-control" %>
                                 </div>
                                 <div class="form-group">
-                                    <label>Ciudad </label>
-                                     <input class="ff_elem form-control" type="hidden" name="direccion[ciudad]" id="geobytescity"/>
-                                     <input class="ff_elem form-control" type="text" name="ff_nm_from[]" value="" id="f_elem_city"/>
+                                    <label for="title">Select Country:</label>
+                                    {!! Form::select('country', ['' => 'Select'] +$countries,'',array('class'=>'form-control','id'=>'country','style'=>'width:350px;'));!!}
+                                   
                                 </div>
                                 <div class="form-group">
-                                    <label>Estado </label>
-                                    <input class="ff_elem" type="hidden" name="direccion[estado]" id="geobytesregion"/>
+                                    <label for="title">Select State:</label>
+                                    <select name="state" id="state" class="form-control" style="width:350px">
+                                    </select>
                                 </div>
+                             
                                 <div class="form-group">
-                                    <label>Pais </label>
-                                    <input class="ff_elem" type="hidden" name="direccion[pais]" id="geobytescountry"/>
+                                    <label for="title">Select City:</label>
+                                    <select name="city" id="city" class="form-control" style="width:350px">
+                                    </select>
                                 </div>
                                 
                                 
@@ -137,11 +137,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Correo </label>
-                                    <%= f.email_field :email, class: "form-control" %>
+                                    {!! Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Nombre completo', 'require']) !!}
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña </label>
-                                    <%= f.password_field :password, autocomplete: "off",  class: "form-control" %>
+                                    {!! Form::password('password',['class'=>'form-control', 'placeholder'=>'*****', 'require']) !!}
                                 </div>
                                 <div class="form-group">
                                     <label>Confirmar contraseña </label>
@@ -203,7 +203,11 @@
 @endsection
 
 @section('scripts')
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
 <script type="text/javascript">
+
 
 
 $(function() {
@@ -279,6 +283,61 @@ $(function() {
 
 </script>
 
+@endsection
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+@section('jsss')
+<script src="http://demo.expertphp.in/js/jquery.js"></script>
+ <script> $jq2 = $.noConflict();</script>
+<script type="text/javascript">
+
+    $jq2('#country').change(function(){
+    var countryID =  $jq2(this).val();    
+    if(countryID){
+         $jq2.ajax({
+           type:"GET",
+           url:"{{url('api/get-state-list')}}?country_id="+countryID,
+           success:function(res){               
+            if(res){
+                 $jq2("#state").empty();
+                 $jq2("#state").append('<option>Select</option>');
+                 $jq2.each(res,function(key,value){
+                    $("#state").append('<option value="'+key+'">'+value+'</option>');
+                });
+           
+            }else{
+                $jq2("#state").empty();
+            }
+           }
+        });
+    }else{
+         $jq2("#state").empty();
+         $jq2("#city").empty();
+    }      
+   });
+     $jq2('#state').on('change',function(){
+    var stateID =  $jq2(this).val();    
+    if(stateID){
+         $jq2.ajax({
+           type:"GET",
+           url:"{{url('api/get-city-list')}}?state_id="+stateID,
+           success:function(res){               
+            if(res){
+                 $jq2("#city").empty();
+                 $jq2.each(res,function(key,value){
+                     $jq2("#city").append('<option value="'+key+'">'+value+'</option>');
+                });
+           
+            }else{
+                $jq2("#city").empty();
+            }
+           }
+        });
+    }else{
+        $jq2("#city").empty();
+    }
+        
+   });
+</script>
+
+
 @endsection

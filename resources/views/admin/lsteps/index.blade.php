@@ -28,6 +28,21 @@
             </div>
             <div class="ibox-content">
                <a href="{{ url('/admin/steps/1/edit') }}" class="btn btn-info btn-sm">Editar contenido de la sección</a> 
+               <br><br>
+               <div class="row">
+                   <div class="col-lg-8 col-lg-offset-1">
+                       <br><br>
+                       <div class="row">
+                           <strong>Título de la sección: </strong> {{ $steps -> titulo1 }}<br>
+                           <strong>Descripción de la sección: </strong> {{ $steps -> descripcion1 }}
+                       </div><br><br>
+                       <div class="row">
+                           <strong>Section's title: </strong> {{ $steps -> titulo2 }}<br>
+                           <strong>Section's description: </strong>{{ $steps -> descripcion2 }}
+                       </div>
+                   </div>
+               </div>
+               <hr width="322px">
                <div class="row">
                   <!-- ESPAÑOL-->
                   <div class="col-lg-6"><br/>
@@ -147,15 +162,14 @@
                   <div class="col-lg-6"><br/>
                      <h3 style="color:#00257B">STEPS' CONTENT. ENGLISH</h3> 
                        <div class="panel-group" id="accordion2">
-                            <div class="panel panel-default">
+                             <div class="panel panel-default">
                               <div class="panel-heading">
                                 <h4 class="panel-title">
-                                  <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">Step #1</a>
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Paso #1</a>
                                 </h4>
                               </div>
-                              <div id="collapse6" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                  <div class="panel-body">
+                              <div id="collapse1" class="panel-collapse collapse in">
+                                 <div class="panel-body">
                                     <div class="col-lg-3"><img src="{{ $steps -> img1 }}" alt="Paso 1" class="img-responsive  img-circle pasos-img"></div>
                                     <div class="col-lg-9">
                                     <h2>
@@ -166,7 +180,6 @@
                                     </em>
                                     </div>
                                  </div> 
-                                </div>
                               </div>
                             </div>
                             <div class="panel panel-default">
@@ -250,7 +263,7 @@
                                         {{ $steps -> paso52 }}
                                     </h2>
                                     <em>
-                                        {{ $steps -> desc52 }}
+                                        {{ $steps -> desc52  }}
                                     </em>
                                     </div>
                                  </div> 

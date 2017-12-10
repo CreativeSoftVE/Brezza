@@ -64,7 +64,8 @@
       @include('landing.layouts.navigation')
       @yield('content')
        
-         
+     
+@yield('jsss') 
 <script src="{!! secure_asset('js/jquery-3.1.1.min.js') !!}" type="text/javascript"></script>
 <script src="{!! secure_asset('js/bootstrap.js') !!}" type="text/javascript"></script>
 <script src="{!! secure_asset('js/app.js') !!}" type="text/javascript"></script>
@@ -82,6 +83,8 @@
       <script src="../landing/js/wow.min.js"></script>
       <script src="../landing/js/inspinia.js"></script>
       <script src="../landing/js/custom.js"></script>
+     
+      <script src="//cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
      
       <script type="text/javascript" >
             $(document).ready(function() {  
@@ -195,7 +198,7 @@
    });
    
 </script>
+@yield('scripts')    
 
-@yield('scripts')
          </body>
 </html>

@@ -190,6 +190,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         
     Laravelista\Comments\Providers\CommentsServiceProvider::class,
+    Spatie\Backup\BackupServiceProvider::class,
 
     ],
 

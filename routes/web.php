@@ -31,7 +31,9 @@
 
 
 
-
+    Route::get('/index', [
+            'uses' => 'APIController@index',
+            'as' => 'index']);
 
 
     Route::get('lang/{lang}', function ($lang) {
@@ -92,6 +94,11 @@
         Route::get('steps/{id}/destroy', [
             'uses' => 'StepsController@destroy',
             'as' => 'admin.steps.destroy']);
+            
+        Route::resource('whoares', 'WhoaresController');
+        Route::get('whoares/{id}/destroy', [
+            'uses' => 'WhoaresController@destroy',
+            'as' => 'admin.whoares.destroy']);
         
         Route::resource('benefits', 'BenefitsController');
         Route::get('benefits/{id}/destroy', [
@@ -99,6 +106,11 @@
             'as' => 'admin.benefits.destroy']);
             
     });
+
+
+Route::get('api/dependent-dropdown','APIController@index');
+Route::get('api/get-state-list','APIController@getStateList');
+Route::get('api/get-city-list','APIController@getCityList');
 
 Auth::routes();
 
